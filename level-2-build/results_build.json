@@ -1,0 +1,772 @@
+{
+  "audit": {
+    "files_scanned": [
+      "assistant.py",
+      "run_build.py"
+    ],
+    "local_only": true,
+    "passed": true,
+    "patterns": [
+      {
+        "count": 0,
+        "pattern": "socket"
+      },
+      {
+        "count": 0,
+        "pattern": "urllib"
+      },
+      {
+        "count": 0,
+        "pattern": "requests"
+      },
+      {
+        "count": 0,
+        "pattern": "urlopen"
+      },
+      {
+        "count": 0,
+        "pattern": "http.client"
+      },
+      {
+        "count": 0,
+        "pattern": "ftplib"
+      },
+      {
+        "count": 0,
+        "pattern": "smtplib"
+      }
+    ],
+    "total_matches": 0
+  },
+  "corpus_fingerprint_sha256": "11964044d39406c51d767be94aa057c6dfc2f077ef97fa2dc6199b267e96c866",
+  "inventory": [
+    {
+      "chars": 389,
+      "doc_id": "B01",
+      "sentences": 6,
+      "sha256": "ddb9126a1ca4caca38f5c30180ec190142ae6ae7318a5676f47b91e06c95150b",
+      "title": "garden notes",
+      "words": 60
+    },
+    {
+      "chars": 373,
+      "doc_id": "B02",
+      "sentences": 6,
+      "sha256": "d62bf16abcf9fff5f9f7f588e147a8dc1fc900eb3a4a36efa57bb9bece371d74",
+      "title": "home budget",
+      "words": 61
+    },
+    {
+      "chars": 378,
+      "doc_id": "B03",
+      "sentences": 6,
+      "sha256": "444e92198d34b9ff94413e0e08714708138a4bd8a866646e72171bf0073ac3f4",
+      "title": "japan trip plan",
+      "words": 62
+    },
+    {
+      "chars": 382,
+      "doc_id": "B04",
+      "sentences": 6,
+      "sha256": "df7b46ed8b0b19f6d2c1cfdaeec319647943b6effe8766fd160ba2c8b0ce20ad",
+      "title": "bicycle repair log",
+      "words": 65
+    },
+    {
+      "chars": 375,
+      "doc_id": "B05",
+      "sentences": 6,
+      "sha256": "ef609b65787663612ce132f9185a95d8cdbd3d23e477c6afaf6b99273cbd086a",
+      "title": "sourdough journal",
+      "words": 66
+    },
+    {
+      "chars": 383,
+      "doc_id": "B06",
+      "sentences": 6,
+      "sha256": "b622a0be7438a9dc5390e8bc6cf2c6c34572b93dcb1ac07d6fb961c3f3eb7d37",
+      "title": "home network notes",
+      "words": 60
+    },
+    {
+      "chars": 379,
+      "doc_id": "B07",
+      "sentences": 6,
+      "sha256": "e65237bbb680e76def19e245656f5c3bdcb7d20604551de8d3dce35c6819f3e6",
+      "title": "exercise routine",
+      "words": 58
+    },
+    {
+      "chars": 383,
+      "doc_id": "B08",
+      "sentences": 6,
+      "sha256": "fb0d3d46e7acba6960c7c90326c619be03a53def06af035aec337fc9e722af2a",
+      "title": "photography notes",
+      "words": 59
+    },
+    {
+      "chars": 375,
+      "doc_id": "B09",
+      "sentences": 6,
+      "sha256": "2fd28deb5a1cff842fc8fcf4bbf670c742b589c7293c0a19a3da5f14366c42bd",
+      "title": "kitchen knife care",
+      "words": 63
+    },
+    {
+      "chars": 392,
+      "doc_id": "B10",
+      "sentences": 6,
+      "sha256": "49ed8990dd1c682d5352e289a5db36712f44894ee7fc37f7155bedd9e3372443",
+      "title": "houseplant care",
+      "words": 59
+    },
+    {
+      "chars": 388,
+      "doc_id": "B11",
+      "sentences": 6,
+      "sha256": "d5a601f7399ee52b1a8cf65b2e006fc7bd870c605d9f463bbc233c6456d3361a",
+      "title": "winter car care",
+      "words": 62
+    },
+    {
+      "chars": 384,
+      "doc_id": "B12",
+      "sentences": 6,
+      "sha256": "fef0be9537f6ee2b91b6e5892830b6d2a8f464988fa1a0aa08a1d1a983d1a3d2",
+      "title": "home painting",
+      "words": 59
+    },
+    {
+      "chars": 401,
+      "doc_id": "B13",
+      "sentences": 6,
+      "sha256": "ca7aac58bd4012f56cc048c754c353ea50219e1cf0107c2ee26099a324c997c2",
+      "title": "camping gear",
+      "words": 62
+    },
+    {
+      "chars": 408,
+      "doc_id": "B14",
+      "sentences": 6,
+      "sha256": "90a9cfe3de3604baedd413f83496922b6c4db889eaa01257c05a44165b9c2834",
+      "title": "tax records",
+      "words": 63
+    },
+    {
+      "chars": 383,
+      "doc_id": "B15",
+      "sentences": 6,
+      "sha256": "9332e807f3cfa6fc6f9c341ba7c17b5adcf30991807cfe0bd665f5b0045252f7",
+      "title": "first aid kit",
+      "words": 62
+    },
+    {
+      "chars": 388,
+      "doc_id": "B16",
+      "sentences": 6,
+      "sha256": "441ea80791a116248667f7875ea36ae631b0c97ed4a46b410239f10ad2769943",
+      "title": "aquarium care",
+      "words": 60
+    },
+    {
+      "chars": 399,
+      "doc_id": "B17",
+      "sentences": 6,
+      "sha256": "de66419f4162c418479d370de17d0030a46eef8ec563f9b2b547128addb7be4f",
+      "title": "coffee brewing",
+      "words": 63
+    },
+    {
+      "chars": 396,
+      "doc_id": "B18",
+      "sentences": 6,
+      "sha256": "39ca2a5fdf561163069d67a5d5a9911be42ddc22173ef13aa4f288b9a485d638",
+      "title": "laptop backup",
+      "words": 60
+    },
+    {
+      "chars": 386,
+      "doc_id": "B19",
+      "sentences": 6,
+      "sha256": "291a424ba49ba1829463aee10538adc12837f92dabb1b2c659fb3d6e5f5fcfd7",
+      "title": "laundry care",
+      "words": 62
+    },
+    {
+      "chars": 387,
+      "doc_id": "B20",
+      "sentences": 6,
+      "sha256": "11ec9868e3121bd025cd073ec3c1c4583603dcb04343ad080a0403fc9041169d",
+      "title": "dog training",
+      "words": 62
+    },
+    {
+      "chars": 418,
+      "doc_id": "B21",
+      "sentences": 6,
+      "sha256": "5ebf529c1366f1c656213dc45b5306be8727aeb0ef8fe446a9b98f32f8df8f48",
+      "title": "piano practice",
+      "words": 61
+    },
+    {
+      "chars": 389,
+      "doc_id": "B22",
+      "sentences": 6,
+      "sha256": "1e84127377d3d28b715a36217cc51d953d0efa7464d0845517ead456f3703df2",
+      "title": "astronomy notes",
+      "words": 60
+    },
+    {
+      "chars": 381,
+      "doc_id": "B23",
+      "sentences": 6,
+      "sha256": "b2fc057f20c0d4233effbc7a7bebb97cf9b747c2df40dca3b66dd2f7e724ecf4",
+      "title": "plumbing fixes",
+      "words": 61
+    },
+    {
+      "chars": 373,
+      "doc_id": "B24",
+      "sentences": 6,
+      "sha256": "98313167b0f143d83bd2c2eb8cbface4779fb70e80fb2592a244a38022f26cb9",
+      "title": "sewing repairs",
+      "words": 62
+    }
+  ],
+  "questions": [
+    {
+      "answer_doc": "B01",
+      "answer_sentence": "S1",
+      "answer_text": "Tomatoes need full sun and weekly watering during dry summer weather. [B01 S1] Basil grows beside tomatoes and helps repel garden pests naturally. [B01 S2]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B01",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "How often do tomatoes need watering in dry summer weather?",
+      "question_id": "BQ01",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B01",
+      "top1_score": 0.554156161057378,
+      "top3_chunk_docs": [
+        "B01",
+        "B10",
+        "B10"
+      ]
+    },
+    {
+      "answer_doc": "B02",
+      "answer_sentence": "S2",
+      "answer_text": "The emergency fund covers three months of living costs safely. [B02 S2] A sinking fund saves a little monthly toward annual insurance. [B02 S4]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B02",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "How many months of living costs does the emergency fund covers in total?",
+      "question_id": "BQ02",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B02",
+      "top1_score": 0.48088442135143195,
+      "top3_chunk_docs": [
+        "B02",
+        "B06",
+        "B02"
+      ]
+    },
+    {
+      "answer_doc": "B03",
+      "answer_sentence": "S1",
+      "answer_text": "The train pass covers travel between Tokyo and Kyoto stations. [B03 S1] The museum in Kyoto opens early on quiet weekday mornings. [B03 S3]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B03",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "Which train pass lets me travel between Tokyo and Kyoto?",
+      "question_id": "BQ03",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B03",
+      "top1_score": 0.5685459727852157,
+      "top3_chunk_docs": [
+        "B03",
+        "B03",
+        "B03"
+      ]
+    },
+    {
+      "answer_doc": "B04",
+      "answer_sentence": "S2",
+      "answer_text": "The front brake pads rub against the wheel rim when misaligned. [B04 S2] A loose chain needs cleaning and fresh lubricant after wet rides. [B04 S1]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B04",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "Why do the front brake pads rub against the wheel rim?",
+      "question_id": "BQ04",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B04",
+      "top1_score": 0.5873703402370207,
+      "top3_chunk_docs": [
+        "B04",
+        "B15",
+        "B23"
+      ]
+    },
+    {
+      "answer_doc": "B05",
+      "answer_sentence": "S1",
+      "answer_text": "The starter rises after feeding with flour and water daily. [B05 S1] The starter jar is kept loosely covered in a warm kitchen corner. [B05 S6]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B05",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What makes the starter rises after feeding with flour?",
+      "question_id": "BQ05",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B05",
+      "top1_score": 0.4974014599274443,
+      "top3_chunk_docs": [
+        "B05",
+        "B05",
+        "B05"
+      ]
+    },
+    {
+      "answer_doc": "B06",
+      "answer_sentence": "S1",
+      "answer_text": "The router sits on a central shelf away from thick walls. [B06 S1] Firmware updates fix bugs and close security gaps in the router. [B06 S3]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B06",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "Where does the router sits on a shelf away from thick walls?",
+      "question_id": "BQ06",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B06",
+      "top1_score": 0.4447014387876828,
+      "top3_chunk_docs": [
+        "B06",
+        "B12",
+        "B03"
+      ]
+    },
+    {
+      "answer_doc": "B07",
+      "answer_sentence": "S1",
+      "answer_text": "Morning stretches loosen stiff shoulders and hips before work. [B07 S1] The weekly run builds stamina over flat quiet routes nearby. [B07 S2]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B07",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What morning stretches loosen stiff shoulders and hips?",
+      "question_id": "BQ07",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B07",
+      "top1_score": 0.5384103758754292,
+      "top3_chunk_docs": [
+        "B07",
+        "B21",
+        "B01"
+      ]
+    },
+    {
+      "answer_doc": "B08",
+      "answer_sentence": "S1",
+      "answer_text": "A tripod steadies the camera during long exposures at dusk. [B08 S1] Soft window light flatters portraits without harsh flash shadows. [B08 S2]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B08",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "How does a tripod steadies the camera during long exposures?",
+      "question_id": "BQ08",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B08",
+      "top1_score": 0.48253232439501376,
+      "top3_chunk_docs": [
+        "B08",
+        "B16",
+        "B21"
+      ]
+    },
+    {
+      "answer_doc": "B09",
+      "answer_sentence": "S1",
+      "answer_text": "A whetstone sharpens a dull kitchen knife at a steady angle. [B09 S1] A chef knife balances weight between handle and blade for control. [B09 S6]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B09",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What whetstone sharpens a dull kitchen knife at a steady angle?",
+      "question_id": "BQ09",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B09",
+      "top1_score": 0.6346169291885242,
+      "top3_chunk_docs": [
+        "B09",
+        "B04",
+        "B05"
+      ]
+    },
+    {
+      "answer_doc": "B10",
+      "answer_sentence": "S3",
+      "answer_text": "Yellow leaves often signal overwatering in indoor houseplants kept inside. [B10 S3] Ferns prefer indirect light and consistently moist potting soil. [B10 S1]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B10",
+      "gold_sentence": "S3",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "Why do yellow leaves signal overwatering in indoor houseplants?",
+      "question_id": "BQ10",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B10",
+      "top1_score": 0.48461214482182585,
+      "top3_chunk_docs": [
+        "B10",
+        "B10",
+        "B06"
+      ]
+    },
+    {
+      "answer_doc": "B11",
+      "answer_sentence": "S2",
+      "answer_text": "The car battery is tested before the first hard frost arrives. [B11 S2] Winter tyres grip better below seven degrees on icy roads. [B11 S1]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B11",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "When is the car battery tested before the first hard frost?",
+      "question_id": "BQ11",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B11",
+      "top1_score": 0.5267390360519822,
+      "top3_chunk_docs": [
+        "B11",
+        "B17",
+        "B16"
+      ]
+    },
+    {
+      "answer_doc": "B12",
+      "answer_sentence": "S2",
+      "answer_text": "A primer coat helps new paint adhere to patched drywall. [B12 S2] Paint is stirred thoroughly and strained to remove dried lumps. [B12 S4]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B12",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What primer coat helps new paint adhere to patched drywall?",
+      "question_id": "BQ12",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B12",
+      "top1_score": 0.570713390429221,
+      "top3_chunk_docs": [
+        "B12",
+        "B12",
+        "B24"
+      ]
+    },
+    {
+      "answer_doc": "B13",
+      "answer_sentence": "S3",
+      "answer_text": "Water is filtered or boiled before drinking from mountain streams. [B13 S3] The tent footprint protects the groundsheet from sharp stones underneath. [B13 S1]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B13",
+      "gold_sentence": "S3",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "How is water filtered or boiled before drinking from mountain streams?",
+      "question_id": "BQ13",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B13",
+      "top1_score": 0.5007571303620368,
+      "top3_chunk_docs": [
+        "B13",
+        "B13",
+        "B17"
+      ]
+    },
+    {
+      "answer_doc": "B14",
+      "answer_sentence": "S3",
+      "answer_text": "The notice of assessment confirms the tax return was processed. [B14 S3] A tax clinic helps newcomers file their first return correctly. [B14 S5]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B14",
+      "gold_sentence": "S3",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What notice of assessment confirms the tax return was processed?",
+      "question_id": "BQ14",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B14",
+      "top1_score": 0.6315261503901993,
+      "top3_chunk_docs": [
+        "B14",
+        "B14",
+        "B14"
+      ]
+    },
+    {
+      "answer_doc": "B15",
+      "answer_sentence": "S1",
+      "answer_text": "The first aid kit holds bandages antiseptic and sterile gauze pads. [B15 S1] Emergency contacts are printed and taped inside the kit lid. [B15 S3]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B15",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What bandages antiseptic and sterile gauze pads does the kit holds?",
+      "question_id": "BQ15",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B15",
+      "top1_score": 0.6291645365488684,
+      "top3_chunk_docs": [
+        "B15",
+        "B15",
+        "B16"
+      ]
+    },
+    {
+      "answer_doc": "B16",
+      "answer_sentence": "S2",
+      "answer_text": "A filter cycles beneficial bacteria that break down fish waste. [B16 S2] Tropical fish are fed small amounts twice daily without overfeeding. [B16 S3]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B16",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What filter cycles beneficial bacteria that break down fish waste?",
+      "question_id": "BQ16",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B16",
+      "top1_score": 0.6925958143921913,
+      "top3_chunk_docs": [
+        "B16",
+        "B16",
+        "B07"
+      ]
+    },
+    {
+      "answer_doc": "B17",
+      "answer_sentence": "S1",
+      "answer_text": "Fresh coffee beans are ground just before brewing for aroma. [B17 S1] Beans are stored in an airtight container away from sunlight exposure. [B17 S6]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B17",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "When are fresh coffee beans ground just before brewing for aroma?",
+      "question_id": "BQ17",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B17",
+      "top1_score": 0.6321994286933955,
+      "top3_chunk_docs": [
+        "B17",
+        "B04",
+        "B17"
+      ]
+    },
+    {
+      "answer_doc": "B18",
+      "answer_sentence": "S6",
+      "answer_text": "A checksum verifies a copied file matches the original exactly. [B18 S6] A weekly backup copies laptop documents to an external drive. [B18 S1]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B18",
+      "gold_sentence": "S6",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What checksum verifies a copied file matches the original exactly?",
+      "question_id": "BQ18",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B18",
+      "top1_score": 0.7187932223976751,
+      "top3_chunk_docs": [
+        "B18",
+        "B14",
+        "B14"
+      ]
+    },
+    {
+      "answer_doc": "B19",
+      "answer_sentence": "S1",
+      "answer_text": "Cold water washing protects dark fabrics from fading in laundry. [B19 S1] Wool jumpers are dried flat to keep their shape after washing. [B19 S3]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B19",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "How does cold water washing protects dark fabrics from fading?",
+      "question_id": "BQ19",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B19",
+      "top1_score": 0.5508485669789303,
+      "top3_chunk_docs": [
+        "B19",
+        "B19",
+        "B13"
+      ]
+    },
+    {
+      "answer_doc": "B21",
+      "answer_sentence": "S2",
+      "answer_text": "A metronome keeps tempo steady during difficult passage practice sessions. [B21 S2] Short daily practice beats one long weekly session for progress. [B21 S5]",
+      "chunk_hit_at_3": true,
+      "gold_doc": "B21",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "is_evidence": true,
+      "question": "What metronome keeps tempo steady during difficult passage practice?",
+      "question_id": "BQ20",
+      "refused": false,
+      "sentence_correct": true,
+      "top1_doc": "B21",
+      "top1_score": 0.522252142433859,
+      "top3_chunk_docs": [
+        "B21",
+        "B01",
+        "B01"
+      ]
+    },
+    {
+      "answer_doc": null,
+      "answer_sentence": null,
+      "answer_text": "No evidence in the local documents for this question.",
+      "chunk_hit_at_3": false,
+      "gold_doc": "NONE",
+      "gold_sentence": "NONE",
+      "hit_at_1": false,
+      "is_evidence": false,
+      "question": "How do I renew a passport for travel abroad?",
+      "question_id": "BQ21",
+      "refused": true,
+      "sentence_correct": false,
+      "top1_doc": "B03",
+      "top1_score": 0.22531610888656342,
+      "top3_chunk_docs": [
+        "B03",
+        "B01",
+        "B01"
+      ]
+    },
+    {
+      "answer_doc": null,
+      "answer_sentence": null,
+      "answer_text": "No evidence in the local documents for this question.",
+      "chunk_hit_at_3": false,
+      "gold_doc": "NONE",
+      "gold_sentence": "NONE",
+      "hit_at_1": false,
+      "is_evidence": false,
+      "question": "What is the best treatment for a migraine headache?",
+      "question_id": "BQ22",
+      "refused": true,
+      "sentence_correct": false,
+      "top1_doc": "B22",
+      "top1_score": 0.23207168946814757,
+      "top3_chunk_docs": [
+        "B22",
+        "B01",
+        "B01"
+      ]
+    },
+    {
+      "answer_doc": null,
+      "answer_sentence": null,
+      "answer_text": "No evidence in the local documents for this question.",
+      "chunk_hit_at_3": false,
+      "gold_doc": "NONE",
+      "gold_sentence": "NONE",
+      "hit_at_1": false,
+      "is_evidence": false,
+      "question": "How much does a flight to Paris cost this year?",
+      "question_id": "BQ23",
+      "refused": true,
+      "sentence_correct": false,
+      "top1_doc": "B01",
+      "top1_score": 0.20370740928928022,
+      "top3_chunk_docs": [
+        "B01",
+        "B01",
+        "B01"
+      ]
+    },
+    {
+      "answer_doc": null,
+      "answer_sentence": null,
+      "answer_text": "No evidence in the local documents for this question.",
+      "chunk_hit_at_3": false,
+      "gold_doc": "NONE",
+      "gold_sentence": "NONE",
+      "hit_at_1": false,
+      "is_evidence": false,
+      "question": "What is the capital of Norway and its population?",
+      "question_id": "BQ24",
+      "refused": true,
+      "sentence_correct": false,
+      "top1_doc": "B01",
+      "top1_score": 0.0,
+      "top3_chunk_docs": [
+        "B01",
+        "B01",
+        "B01"
+      ]
+    }
+  ],
+  "scenario": "local-first assistant pipeline, 24 synthetic documents ingested from local files, overlapping word chunks, TF-IDF chunk index, multi-sentence extractive cited answers, threshold refusal, persistent session memory, privacy audit, no language model",
+  "session_check": {
+    "cited_doc_ids": [
+      "B01",
+      "B18"
+    ],
+    "entries_after_reload": 3,
+    "entries_recorded": 3,
+    "refused_count": 1,
+    "reload_matches": true
+  },
+  "summary": {
+    "chunk_recall_at_3": 1.0,
+    "chunk_recall_at_3_correct": 20,
+    "chunks": 72,
+    "documents": 24,
+    "evidence_questions": 20,
+    "no_evidence_questions": 4,
+    "questions": 24,
+    "refusal_false_negative": 0,
+    "refusal_false_positive": 0,
+    "refusal_precision": 1.0,
+    "refusal_recall": 1.0,
+    "refusal_true_positive": 4,
+    "sentence_accuracy": 1.0,
+    "sentence_correct": 20,
+    "threshold": 0.3,
+    "top1_accuracy": 1.0,
+    "top1_correct": 20
+  }
+}

@@ -1,0 +1,3 @@
+Title: laptop backup
+
+A weekly backup copies laptop documents to an external drive. Version history keeps earlier drafts of important project files safe. A password manager stores unique passwords in an encrypted vault. The laptop screen brightness is lowered to reduce eye strain. Disk cleanup removes temporary files and reclaims storage space monthly. A checksum verifies a copied file matches the original exactly.
