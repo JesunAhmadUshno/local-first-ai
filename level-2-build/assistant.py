@@ -26,8 +26,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LEARN_DIR = os.path.join(os.path.dirname(HERE), "level-1-learn")
 sys.path.insert(0, LEARN_DIR)
 from local_first import (  # noqa: E402
-    LocalFirstError, audit_sources, compute_idf, cosine,
-    document_inventory, tfidf_vector, tokenize,
+    LocalFirstError,
+    audit_sources,
+    compute_idf,
+    cosine,
+    document_inventory,
+    tfidf_vector,
 )
 
 CHUNK_SIZE_WORDS = 30

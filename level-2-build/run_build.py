@@ -17,8 +17,14 @@ import tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from assistant import (  # noqa: E402
-    ChunkIndex, Session, audit_build_sources, build_questions,
-    corpus_fingerprint, corpus_inventory, evaluate, ingest_directory,
+    ChunkIndex,
+    Session,
+    audit_build_sources,
+    build_questions,
+    corpus_fingerprint,
+    corpus_inventory,
+    evaluate,
+    ingest_directory,
 )
 
 SOURCE_FILES = ("assistant.py", "run_build.py")

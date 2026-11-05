@@ -14,11 +14,21 @@ import unittest
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
 from assistant import (  # noqa: E402
-    ANSWER_SENTENCES, CHUNK_OVERLAP_WORDS, CHUNK_SIZE_WORDS,
-    REFUSAL_THRESHOLD, BuildError, ChunkIndex, Session,
-    audit_build_sources, build_questions, chunk_document,
-    corpus_fingerprint, corpus_inventory, evaluate,
-    ingest_directory, split_sentences,
+    ANSWER_SENTENCES,
+    CHUNK_OVERLAP_WORDS,
+    CHUNK_SIZE_WORDS,
+    REFUSAL_THRESHOLD,
+    BuildError,
+    ChunkIndex,
+    Session,
+    audit_build_sources,
+    build_questions,
+    chunk_document,
+    corpus_fingerprint,
+    corpus_inventory,
+    evaluate,
+    ingest_directory,
+    split_sentences,
 )
 
 DATA = os.path.join(ROOT, "level-2-build", "data")
