@@ -13,8 +13,12 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from local_first import (  # noqa: E402
-    LocalIndex, audit_sources, build_documents, build_questions,
-    document_inventory, evaluate,
+    LocalIndex,
+    audit_sources,
+    build_documents,
+    build_questions,
+    document_inventory,
+    evaluate,
 )
 
 

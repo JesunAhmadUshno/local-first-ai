@@ -8,9 +8,18 @@ import unittest
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "level-1-learn"))
 from local_first import (  # noqa: E402
-    LocalFirstError, LocalIndex, audit_sources, build_documents,
-    build_questions, compute_idf, cosine, document_inventory,
-    document_text, evaluate, tfidf_vector, tokenize,
+    LocalFirstError,
+    LocalIndex,
+    audit_sources,
+    build_documents,
+    build_questions,
+    compute_idf,
+    cosine,
+    document_inventory,
+    document_text,
+    evaluate,
+    tfidf_vector,
+    tokenize,
 )
 
 
