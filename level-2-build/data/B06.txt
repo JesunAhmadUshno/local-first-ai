@@ -1,0 +1,3 @@
+Title: home network notes
+
+The router sits on a central shelf away from thick walls. A strong unique password protects the home wifi signal daily. Firmware updates fix bugs and close security gaps in the router. A guest network keeps visitors separate from personal devices. Ethernet cables give the desktop a stable fast connection always. Restarting the modem clears many temporary connection faults quickly.
