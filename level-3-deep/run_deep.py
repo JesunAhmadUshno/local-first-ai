@@ -16,8 +16,12 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from study import (  # noqa: E402
-    CLOUD_LATENCY_ASSUMED_MS, PRICING_CHECKED, axis_winners,
-    audit_deep_sources, cost_table, decision_rules,
+    CLOUD_LATENCY_ASSUMED_MS,
+    PRICING_CHECKED,
+    audit_deep_sources,
+    axis_winners,
+    cost_table,
+    decision_rules,
     run_local_measurement,
 )
 

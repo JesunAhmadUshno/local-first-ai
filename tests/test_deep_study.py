@@ -12,9 +12,16 @@ import unittest
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "level-3-deep"))
 from study import (  # noqa: E402
-    CLOUD_LATENCY_ASSUMED_MS, PRICING_MODELS, DeepError,
-    audit_deep_sources, axis_winners, build_cloud_prompt,
-    cost_for_tokens, cost_table, decision_rules, estimate_tokens,
+    CLOUD_LATENCY_ASSUMED_MS,
+    PRICING_MODELS,
+    DeepError,
+    audit_deep_sources,
+    axis_winners,
+    build_cloud_prompt,
+    cost_for_tokens,
+    cost_table,
+    decision_rules,
+    estimate_tokens,
     run_local_measurement,
 )
 
