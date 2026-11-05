@@ -74,3 +74,16 @@ PROPOSED. See NOVELTY.md. The novelty text is a draft until the Jev claim_check 
 ## License
 
 Code: Apache-2.0 (see LICENSE). Tutorials: CC BY 4.0. Ruled in D-V3-11, 2026-11-04.
+
+## Fan-out
+
+Written fan-out set for v1.0 in fanout/: blog-post.md,
+tutorial.md (every command verified by running it),
+website-page.md, linkedin-post.md (DRAFT NOT POSTED, link as
+the first-comment line), paper-candidate.md (submission is
+Jesun's tap), and release-notes.md covering v0.1, v0.5, and
+v1.0. The full channel log and per-piece publicity grades are
+in PUBLICITY.md. Overall fan-out grade: 9,457 of 10,000.
+Social posting is held under the standing platform rules:
+Threads awaits Jesun's tap, and the video is held for the
+January engine queue.
