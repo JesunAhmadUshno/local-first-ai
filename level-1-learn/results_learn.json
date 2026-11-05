@@ -1,0 +1,310 @@
+{
+  "audit": {
+    "files_scanned": [
+      "local_first.py",
+      "run_learn.py"
+    ],
+    "local_only": true,
+    "passed": true,
+    "patterns": [
+      {
+        "count": 0,
+        "pattern": "socket"
+      },
+      {
+        "count": 0,
+        "pattern": "urllib"
+      },
+      {
+        "count": 0,
+        "pattern": "requests"
+      },
+      {
+        "count": 0,
+        "pattern": "urlopen"
+      },
+      {
+        "count": 0,
+        "pattern": "http.client"
+      },
+      {
+        "count": 0,
+        "pattern": "ftplib"
+      },
+      {
+        "count": 0,
+        "pattern": "smtplib"
+      }
+    ],
+    "total_matches": 0
+  },
+  "inventory": [
+    {
+      "chars": 148,
+      "doc_id": "D01",
+      "sentences": 3,
+      "sha256": "4d7f88db541543f4b31c2eb7c6b35a46dba1538218f559ceb022c913a2a74d81",
+      "title": "garden notes",
+      "words": 23
+    },
+    {
+      "chars": 150,
+      "doc_id": "D02",
+      "sentences": 3,
+      "sha256": "b2fbb2b310e461b9ded8b84f54b1860d9294f37bd04ff96cd9deea20ac7c2c3c",
+      "title": "home budget",
+      "words": 25
+    },
+    {
+      "chars": 149,
+      "doc_id": "D03",
+      "sentences": 3,
+      "sha256": "dd096eb1389321c50d4f054e64d2a7891a35b7783cafad4ab3c82374795d30c8",
+      "title": "japan trip plan",
+      "words": 25
+    },
+    {
+      "chars": 146,
+      "doc_id": "D04",
+      "sentences": 3,
+      "sha256": "af6fb8c26a20ea1efd7c8ba649cb749400888fa0434e9ad5ecabc0b9f36d8d1b",
+      "title": "bicycle repair log",
+      "words": 25
+    },
+    {
+      "chars": 142,
+      "doc_id": "D05",
+      "sentences": 3,
+      "sha256": "544cba8c19e6c413ff484f89932bd4703b487290871e47908d508aeb98f15015",
+      "title": "sourdough journal",
+      "words": 26
+    },
+    {
+      "chars": 149,
+      "doc_id": "D06",
+      "sentences": 3,
+      "sha256": "d9eeb3be71d26d64ed3ffa11c2055cb59c6ac38ff606dad7b5719518ad5676d7",
+      "title": "home network notes",
+      "words": 26
+    },
+    {
+      "chars": 144,
+      "doc_id": "D07",
+      "sentences": 3,
+      "sha256": "abb045ccbe6996396e2b37bf3ccc3353cb302af7dcc852f8752f072a2f63fbfc",
+      "title": "exercise routine",
+      "words": 23
+    },
+    {
+      "chars": 151,
+      "doc_id": "D08",
+      "sentences": 3,
+      "sha256": "8b3d4a77f69cad659c9eb6dd0a0278ca8462734994deed42984a6a6a23bd61e9",
+      "title": "photography notes",
+      "words": 23
+    }
+  ],
+  "questions": [
+    {
+      "answer_doc": "D01",
+      "answer_sentence": "S1",
+      "answer_text": "Tomatoes need full sun and weekly watering. [D01 S1]",
+      "gold_doc": "D01",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "tomatoes weekly watering sun",
+      "question_id": "Q01",
+      "sentence_correct": true,
+      "top1_doc": "D01",
+      "top1_score": 0.5371146121646176,
+      "top3_docs": [
+        "D01",
+        "D07",
+        "D02"
+      ]
+    },
+    {
+      "answer_doc": "D02",
+      "answer_sentence": "S2",
+      "answer_text": "The emergency fund covers three months of living costs. [D02 S2]",
+      "gold_doc": "D02",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "emergency fund covers three months living costs",
+      "question_id": "Q02",
+      "sentence_correct": true,
+      "top1_doc": "D02",
+      "top1_score": 0.6153165402874127,
+      "top3_docs": [
+        "D02",
+        "D03",
+        "D01"
+      ]
+    },
+    {
+      "answer_doc": "D03",
+      "answer_sentence": "S1",
+      "answer_text": "The train pass covers travel between Tokyo and Kyoto. [D03 S1]",
+      "gold_doc": "D03",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "train pass travel Tokyo Kyoto",
+      "question_id": "Q03",
+      "sentence_correct": true,
+      "top1_doc": "D03",
+      "top1_score": 0.5314583517628763,
+      "top3_docs": [
+        "D03",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "answer_doc": "D04",
+      "answer_sentence": "S1",
+      "answer_text": "A loose chain needs cleaning and fresh lubricant. [D04 S1]",
+      "gold_doc": "D04",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "chain cleaning fresh lubricant",
+      "question_id": "Q04",
+      "sentence_correct": true,
+      "top1_doc": "D04",
+      "top1_score": 0.4624679254053762,
+      "top3_docs": [
+        "D04",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "answer_doc": "D05",
+      "answer_sentence": "S1",
+      "answer_text": "The starter rises after feeding with flour and water. [D05 S1]",
+      "gold_doc": "D05",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "starter rises feeding flour",
+      "question_id": "Q05",
+      "sentence_correct": true,
+      "top1_doc": "D05",
+      "top1_score": 0.5163977794943223,
+      "top3_docs": [
+        "D05",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "answer_doc": "D06",
+      "answer_sentence": "S1",
+      "answer_text": "The router sits on a shelf away from thick walls. [D06 S1]",
+      "gold_doc": "D06",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "router shelf thick walls",
+      "question_id": "Q06",
+      "sentence_correct": true,
+      "top1_doc": "D06",
+      "top1_score": 0.4714045207910317,
+      "top3_docs": [
+        "D06",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "answer_doc": "D07",
+      "answer_sentence": "S1",
+      "answer_text": "Morning stretches loosen stiff shoulders and hips. [D07 S1]",
+      "gold_doc": "D07",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "morning stretches shoulders hips",
+      "question_id": "Q07",
+      "sentence_correct": true,
+      "top1_doc": "D07",
+      "top1_score": 0.47535080070071445,
+      "top3_docs": [
+        "D07",
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "answer_doc": "D08",
+      "answer_sentence": "S1",
+      "answer_text": "A tripod steadies the camera during long exposures. [D08 S1]",
+      "gold_doc": "D08",
+      "gold_sentence": "S1",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "tripod camera long exposures",
+      "question_id": "Q08",
+      "sentence_correct": true,
+      "top1_doc": "D08",
+      "top1_score": 0.4573244547978638,
+      "top3_docs": [
+        "D08",
+        "D04",
+        "D01"
+      ]
+    },
+    {
+      "answer_doc": "D01",
+      "answer_sentence": "S3",
+      "answer_text": "Compost feeds the soil before spring planting. [D01 S3]",
+      "gold_doc": "D01",
+      "gold_sentence": "S3",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "compost soil spring planting",
+      "question_id": "Q09",
+      "sentence_correct": true,
+      "top1_doc": "D01",
+      "top1_score": 0.43956176860760815,
+      "top3_docs": [
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "answer_doc": "D04",
+      "answer_sentence": "S2",
+      "answer_text": "The front brake pads rub against the wheel rim. [D04 S2]",
+      "gold_doc": "D04",
+      "gold_sentence": "S2",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "question": "brake pads wheel rim",
+      "question_id": "Q10",
+      "sentence_correct": true,
+      "top1_doc": "D04",
+      "top1_score": 0.4624679254053762,
+      "top3_docs": [
+        "D04",
+        "D01",
+        "D02"
+      ]
+    }
+  ],
+  "scenario": "local-first assistant core, 8 synthetic documents, 10 labelled questions, TF-IDF retrieval, extractive cited answers, privacy audit",
+  "summary": {
+    "documents": 8,
+    "questions": 10,
+    "recall_at_3": 1.0,
+    "recall_at_3_correct": 10,
+    "sentence_accuracy": 1.0,
+    "sentence_correct": 10,
+    "top1_accuracy": 1.0,
+    "top1_correct": 10
+  }
+}
