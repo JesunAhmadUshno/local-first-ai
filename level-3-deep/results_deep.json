@@ -1,0 +1,428 @@
+{
+  "cloud_costs_modelled": {
+    "label": "MODELLED from published pricing, not measured",
+    "local_cost_note": "no API fee by construction; electricity and hardware excluded",
+    "local_marginal_api_cost_usd": 0.0,
+    "rows": [
+      {
+        "cost_per_1000000_queries_usd": 31.062500000000004,
+        "cost_per_100000_queries_usd": 3.10625,
+        "cost_per_1000_queries_usd": 0.031062500000000003,
+        "cost_per_1_queries_usd": 3.10625e-05,
+        "cost_per_query_usd": 3.10625e-05,
+        "input_rate": 0.1,
+        "model": "gpt-6-luna",
+        "output_rate": 0.5,
+        "provider": "OpenAI",
+        "source": "https://developers.openai.com/api/docs/pricing"
+      },
+      {
+        "cost_per_1000000_queries_usd": 31.062500000000004,
+        "cost_per_100000_queries_usd": 3.10625,
+        "cost_per_1000_queries_usd": 0.031062500000000003,
+        "cost_per_1_queries_usd": 3.10625e-05,
+        "cost_per_query_usd": 3.10625e-05,
+        "input_rate": 0.1,
+        "model": "claude-haiku-5.5",
+        "output_rate": 0.5,
+        "provider": "Anthropic",
+        "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      {
+        "cost_per_1000000_queries_usd": 122.64583333333333,
+        "cost_per_100000_queries_usd": 12.264583333333333,
+        "cost_per_1000_queries_usd": 0.12264583333333333,
+        "cost_per_1_queries_usd": 0.00012264583333333333,
+        "cost_per_query_usd": 0.00012264583333333333,
+        "input_rate": 0.3,
+        "model": "gemini-3.5-flash-lite",
+        "output_rate": 2.5,
+        "provider": "Google",
+        "source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      {
+        "cost_per_1000000_queries_usd": 232.96875,
+        "cost_per_100000_queries_usd": 23.296875,
+        "cost_per_1000_queries_usd": 0.23296875,
+        "cost_per_1_queries_usd": 0.00023296875,
+        "cost_per_query_usd": 0.00023296875,
+        "input_rate": 0.75,
+        "model": "gemini-3.8-flash",
+        "output_rate": 3.75,
+        "provider": "Google",
+        "source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      {
+        "cost_per_1000000_queries_usd": 621.2500000000001,
+        "cost_per_100000_queries_usd": 62.12500000000001,
+        "cost_per_1000_queries_usd": 0.6212500000000001,
+        "cost_per_1_queries_usd": 0.0006212500000000001,
+        "cost_per_query_usd": 0.0006212500000000001,
+        "input_rate": 2.0,
+        "model": "gpt-6.1-sol",
+        "output_rate": 10.0,
+        "provider": "OpenAI",
+        "source": "https://developers.openai.com/api/docs/pricing"
+      },
+      {
+        "cost_per_1000000_queries_usd": 621.2500000000001,
+        "cost_per_100000_queries_usd": 62.12500000000001,
+        "cost_per_1000_queries_usd": 0.6212500000000001,
+        "cost_per_1_queries_usd": 0.0006212500000000001,
+        "cost_per_query_usd": 0.0006212500000000001,
+        "input_rate": 2.0,
+        "model": "claude-sonnet-5.5",
+        "output_rate": 10.0,
+        "provider": "Anthropic",
+        "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+      }
+    ]
+  },
+  "cloud_latency_assumption": {
+    "label": "ASSUMED, unverified, not measured",
+    "note": "planning range for a hosted API answer (network round trip plus generation); used only for the order of magnitude comparison",
+    "range_ms": [
+      1000.0,
+      3000.0
+    ]
+  },
+  "local_quality_measured": {
+    "chunk_recall_at_3": 1.0,
+    "chunk_recall_at_3_correct": 20,
+    "chunks": 72,
+    "documents": 24,
+    "evidence_questions": 20,
+    "no_evidence_questions": 4,
+    "questions": 24,
+    "refusal_false_negative": 0,
+    "refusal_false_positive": 0,
+    "refusal_precision": 1.0,
+    "refusal_recall": 1.0,
+    "refusal_true_positive": 4,
+    "sentence_accuracy": 1.0,
+    "sentence_correct": 20,
+    "threshold": 0.3,
+    "top1_accuracy": 1.0,
+    "top1_correct": 20
+  },
+  "ollama": {
+    "available": false,
+    "check": "no ollama binary on PATH and no server on localhost port 11434, rechecked 2026-11-05 on the Muse VM; the local core stays extractive"
+  },
+  "pricing_checked": "2026-11-05",
+  "privacy": {
+    "cloud_data_transfer": "the prompt and the retrieved private chunks leave the machine to the provider by construction",
+    "google_tier_note": "the Google pricing page states free tier content is used to improve products and paid tier content is not",
+    "local_audit_build": "2 source files scanned, 7 network patterns, 0 matches, passed (level-2-build results)",
+    "local_audit_deep": {
+      "files_scanned": [
+        "run_deep.py",
+        "study.py"
+      ],
+      "local_only": true,
+      "passed": true,
+      "patterns": [
+        {
+          "count": 0,
+          "pattern": "socket"
+        },
+        {
+          "count": 0,
+          "pattern": "urllib"
+        },
+        {
+          "count": 0,
+          "pattern": "requests"
+        },
+        {
+          "count": 0,
+          "pattern": "urlopen"
+        },
+        {
+          "count": 0,
+          "pattern": "http.client"
+        },
+        {
+          "count": 0,
+          "pattern": "ftplib"
+        },
+        {
+          "count": 0,
+          "pattern": "smtplib"
+        }
+      ],
+      "total_matches": 0
+    },
+    "local_data_transfer": "none by construction: inputs and outputs are local files"
+  },
+  "scenario": "local against cloud study: local side measured with the Build pipeline on its 24 labelled questions (latency, quality, privacy audit); cloud side modelled from published pricing and stated token assumptions only, no API call",
+  "timing": {
+    "answer_latency_ms_max": 0.7189199995991657,
+    "answer_latency_ms_mean": 0.3325509333118741,
+    "answer_latency_ms_median": 0.3528494999045506,
+    "answer_latency_ms_min": 0.033570000141480705,
+    "index_build_ms_max": 5.494909999924857,
+    "index_build_ms_mean": 3.638862999923731,
+    "index_build_ms_min": 2.9913609996583546,
+    "note": "timing fields vary between runs and are excluded from the determinism check",
+    "queries_timed": 120,
+    "rounds": 5
+  },
+  "token_model": {
+    "estimator": "estimated tokens = ceil(words / 0.75), a stated assumption, not a provider tokenizer",
+    "mean_input_tokens_est": 163.33333333333334,
+    "mean_output_tokens_est": 29.458333333333332,
+    "output_proxy": "word count of the local answer for the same question",
+    "per_query": [
+      {
+        "input_tokens_est": 158,
+        "output_tokens_est": 34,
+        "output_words": 25,
+        "prompt_words": 118,
+        "question_id": "BQ01",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 163,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 122,
+        "question_id": "BQ02",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 162,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 121,
+        "question_id": "BQ03",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 174,
+        "output_tokens_est": 35,
+        "output_words": 26,
+        "prompt_words": 130,
+        "question_id": "BQ04",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 166,
+        "output_tokens_est": 35,
+        "output_words": 26,
+        "prompt_words": 124,
+        "question_id": "BQ05",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 175,
+        "output_tokens_est": 35,
+        "output_words": 26,
+        "prompt_words": 131,
+        "question_id": "BQ06",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 170,
+        "output_tokens_est": 31,
+        "output_words": 23,
+        "prompt_words": 127,
+        "question_id": "BQ07",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 147,
+        "output_tokens_est": 31,
+        "output_words": 23,
+        "prompt_words": 110,
+        "question_id": "BQ08",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 162,
+        "output_tokens_est": 35,
+        "output_words": 26,
+        "prompt_words": 121,
+        "question_id": "BQ09",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 171,
+        "output_tokens_est": 31,
+        "output_words": 23,
+        "prompt_words": 128,
+        "question_id": "BQ10",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 164,
+        "output_tokens_est": 34,
+        "output_words": 25,
+        "prompt_words": 123,
+        "question_id": "BQ11",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 162,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 121,
+        "question_id": "BQ12",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 164,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 123,
+        "question_id": "BQ13",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 163,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 122,
+        "question_id": "BQ14",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 160,
+        "output_tokens_est": 34,
+        "output_words": 25,
+        "prompt_words": 120,
+        "question_id": "BQ15",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 156,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 117,
+        "question_id": "BQ16",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 164,
+        "output_tokens_est": 34,
+        "output_words": 25,
+        "prompt_words": 123,
+        "question_id": "BQ17",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 150,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 112,
+        "question_id": "BQ18",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 172,
+        "output_tokens_est": 34,
+        "output_words": 25,
+        "prompt_words": 129,
+        "question_id": "BQ19",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 158,
+        "output_tokens_est": 32,
+        "output_words": 24,
+        "prompt_words": 118,
+        "question_id": "BQ20",
+        "refused": false
+      },
+      {
+        "input_tokens_est": 171,
+        "output_tokens_est": 12,
+        "output_words": 9,
+        "prompt_words": 128,
+        "question_id": "BQ21",
+        "refused": true
+      },
+      {
+        "input_tokens_est": 171,
+        "output_tokens_est": 12,
+        "output_words": 9,
+        "prompt_words": 128,
+        "question_id": "BQ22",
+        "refused": true
+      },
+      {
+        "input_tokens_est": 159,
+        "output_tokens_est": 12,
+        "output_words": 9,
+        "prompt_words": 119,
+        "question_id": "BQ23",
+        "refused": true
+      },
+      {
+        "input_tokens_est": 158,
+        "output_tokens_est": 12,
+        "output_words": 9,
+        "prompt_words": 118,
+        "question_id": "BQ24",
+        "refused": true
+      }
+    ],
+    "prompt_shape": "instruction line plus the top 3 retrieved chunk texts plus the question, built locally, never sent"
+  },
+  "verdict": {
+    "axis_winners": [
+      {
+        "axis": "cost",
+        "evidence": "local marginal API cost is zero by construction; cloud costs are modelled from published pricing",
+        "winner": "local"
+      },
+      {
+        "axis": "speed",
+        "evidence": "local latency is measured on this corpus; the cloud figure is a labelled assumed range, so the win is order of magnitude only and corpus bound",
+        "winner": "local"
+      },
+      {
+        "axis": "quality_on_eval_set",
+        "evidence": "measured on the Build eval set only; cloud quality is not measured in this study",
+        "winner": "local"
+      },
+      {
+        "axis": "quality_capability",
+        "evidence": "capability comparison, not a measurement: generation, paraphrase, synthesis, and general knowledge against extraction only",
+        "winner": "cloud"
+      },
+      {
+        "axis": "privacy",
+        "evidence": "source audit with zero network pattern matches and no data transfer by construction, against a prompt transfer to the provider by construction",
+        "winner": "local"
+      }
+    ],
+    "decision_rules": [
+      {
+        "condition": "the data must not leave the device, or the work must run offline",
+        "reason": "the cloud prompt carries the question and the retrieved private chunks to the provider; the local pipeline sends nothing anywhere",
+        "winner": "local"
+      },
+      {
+        "condition": "the question needs paraphrase, synonyms, facts combined across documents, or general knowledge the documents do not hold",
+        "reason": "the local core is extractive and exact token matching only; it cannot do any of these, and refuses or misses instead",
+        "winner": "cloud"
+      },
+      {
+        "condition": "the question is a lookup whose answer is a sentence inside the local documents, at any volume",
+        "reason": "measured local quality on the eval set is perfect and the marginal API cost is zero, while every cloud query carries a modelled fee and a data transfer",
+        "winner": "local"
+      },
+      {
+        "condition": "the corpus is large, messy, or in formats beyond plain text",
+        "reason": "the local ingest reads plain text files with a Title first line only; hosted models accept far more, at the modelled price and with the privacy transfer named above",
+        "winner": "cloud"
+      },
+      {
+        "condition": "a fluent written answer matters more than a verbatim cited sentence",
+        "reason": "the local core returns copied sentences and cannot write; a generative model writes, and can also write without evidence, which the local refusal rule exists to prevent",
+        "winner": "cloud"
+      }
+    ]
+  }
+}
