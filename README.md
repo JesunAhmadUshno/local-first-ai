@@ -2,6 +2,8 @@
 
 A private local assistant on Ollama, fully offline local RAG, a local against cloud study.
 
+Live dashboard: https://jesunahmadushno.github.io/local-first-ai/ (the Build pipeline ported to run in your browser, checked at build time against results_build.json, plus the evaluation, refusal threshold, chunking, modelled cost, speed and privacy results). Source in site/; research review in docs/research-review.md.
+
 Status: Deep DONE, v1.0 SHIPPED (2026-11-05, ROADMAP-V3-BATCH). All three levels are built, tested, and measured below. The v1.1 backlog is ROADMAP.md at the repo root.
 Project: P15. Fleet node: BlackBox (GPU). Wave: Wave 7. All levels were run on the Muse VM (CPU); see the level READMEs for the named deduction. There is no Ollama and no language model in any level: Ollama was rechecked unavailable on the Muse VM on 2026-11-05, so the assistant is an extractive core, named plainly in level-2-build/BUILD-SPEC.md, and Deep compares that measured local core against cloud costs modelled from published pricing only.
 
