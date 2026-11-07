@@ -1,0 +1,636 @@
+{
+  "baselines": {
+    "bm25_chunks_30_10": {
+      "evidence_questions": 20,
+      "recall_at_3_correct": 20,
+      "top1_correct": 20
+    },
+    "tfidf_chunks_30_10": {
+      "evidence_questions": 20,
+      "recall_at_3_correct": 20,
+      "top1_correct": 20
+    },
+    "tfidf_whole_documents": {
+      "evidence_questions": 20,
+      "recall_at_3_correct": 20,
+      "top1_correct": 20
+    }
+  },
+  "chunk_sweep": [
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 10,
+      "chunks": 159,
+      "overlap": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 1,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 10,
+      "chunks": 280,
+      "overlap": 5,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 1,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 15,
+      "chunks": 111,
+      "overlap": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 1,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 15,
+      "chunks": 145,
+      "overlap": 5,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 1,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 15,
+      "chunks": 256,
+      "overlap": 10,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 1,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 20,
+      "chunks": 87,
+      "overlap": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 20,
+      "chunks": 97,
+      "overlap": 5,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 20,
+      "chunks": 135,
+      "overlap": 10,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 30,
+      "chunks": 63,
+      "overlap": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 30,
+      "chunks": 72,
+      "overlap": 5,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 30,
+      "chunks": 72,
+      "overlap": 10,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 30,
+      "chunks": 111,
+      "overlap": 20,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 40,
+      "chunks": 48,
+      "overlap": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 40,
+      "chunks": 48,
+      "overlap": 5,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 40,
+      "chunks": 48,
+      "overlap": 10,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 40,
+      "chunks": 63,
+      "overlap": 20,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 60,
+      "chunks": 39,
+      "overlap": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 60,
+      "chunks": 39,
+      "overlap": 5,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 60,
+      "chunks": 39,
+      "overlap": 10,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 60,
+      "chunks": 39,
+      "overlap": 20,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 100,
+      "chunks": 24,
+      "overlap": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 100,
+      "chunks": 24,
+      "overlap": 5,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 100,
+      "chunks": 24,
+      "overlap": 10,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    },
+    {
+      "chunk_recall_at_3_correct": 20,
+      "chunk_size": 100,
+      "chunks": 24,
+      "overlap": 20,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "sentence_correct": 20,
+      "top1_correct": 20
+    }
+  ],
+  "hard_set": {
+    "distractor_questions": 6,
+    "distractor_refused": 2,
+    "paraphrase_answered_correctly": 2,
+    "paraphrase_questions": 10,
+    "paraphrase_refused": 8,
+    "paraphrase_top1_correct": 6,
+    "rows": [
+      {
+        "correct": false,
+        "gold_doc": "B01",
+        "id": "HQ01",
+        "kind": "synonym_paraphrase",
+        "question": "How frequently should I irrigate plants when it is hot and dry?",
+        "refused": true,
+        "top1_doc": "B10",
+        "top1_score": 0.2743205010007662
+      },
+      {
+        "correct": false,
+        "gold_doc": "B09",
+        "id": "HQ02",
+        "kind": "synonym_paraphrase",
+        "question": "How do I sharpen a blunt blade?",
+        "refused": true,
+        "top1_doc": "B09",
+        "top1_score": 0.2601297340196547
+      },
+      {
+        "correct": true,
+        "gold_doc": "B04",
+        "id": "HQ03",
+        "kind": "synonym_paraphrase",
+        "question": "Why does my bike brake drag on the rim?",
+        "refused": false,
+        "top1_doc": "B04",
+        "top1_score": 0.32450473739009145
+      },
+      {
+        "correct": false,
+        "gold_doc": "B17",
+        "id": "HQ04",
+        "kind": "synonym_paraphrase",
+        "question": "How long should an espresso pull last?",
+        "refused": true,
+        "top1_doc": "B17",
+        "top1_score": 0.1941619463314333
+      },
+      {
+        "correct": true,
+        "gold_doc": "B06",
+        "id": "HQ05",
+        "kind": "synonym_paraphrase",
+        "question": "What keeps my internet connection secure from neighbours?",
+        "refused": false,
+        "top1_doc": "B06",
+        "top1_score": 0.3569286364613949
+      },
+      {
+        "correct": false,
+        "gold_doc": "B23",
+        "id": "HQ06",
+        "kind": "synonym_paraphrase",
+        "question": "How do I unclog a sink?",
+        "refused": true,
+        "top1_doc": "B23",
+        "top1_score": 0.21574438032813273
+      },
+      {
+        "correct": false,
+        "gold_doc": "B11",
+        "id": "HQ07",
+        "kind": "synonym_paraphrase",
+        "question": "When should the automobile battery be checked?",
+        "refused": true,
+        "top1_doc": "B04",
+        "top1_score": 0.20598232590794324
+      },
+      {
+        "correct": false,
+        "gold_doc": "B20",
+        "id": "HQ08",
+        "kind": "synonym_paraphrase",
+        "question": "How do I keep my canine from chewing the sofa?",
+        "refused": true,
+        "top1_doc": "B19",
+        "top1_score": 0.18468330149241
+      },
+      {
+        "correct": false,
+        "gold_doc": "B19",
+        "id": "HQ09",
+        "kind": "synonym_paraphrase",
+        "question": "How do I stop black clothes losing colour?",
+        "refused": true,
+        "top1_doc": "B05",
+        "top1_score": 0.1907810547924263
+      },
+      {
+        "correct": false,
+        "gold_doc": "B17",
+        "id": "HQ10",
+        "kind": "synonym_paraphrase",
+        "question": "Where should I store coffee so it stays fresh?",
+        "refused": true,
+        "top1_doc": "B17",
+        "top1_score": 0.28403288939954696
+      },
+      {
+        "correct": true,
+        "gold_doc": "NONE",
+        "id": "HQ11",
+        "kind": "cross_topic_distractor",
+        "question": "How much water should a dog drink in summer?",
+        "refused": true,
+        "top1_doc": "B20",
+        "top1_score": 0.2506099562316129
+      },
+      {
+        "correct": true,
+        "gold_doc": "NONE",
+        "id": "HQ12",
+        "kind": "cross_topic_distractor",
+        "question": "Which weekly train runs from the garden centre?",
+        "refused": true,
+        "top1_doc": "B01",
+        "top1_score": 0.13544154804454317
+      },
+      {
+        "correct": false,
+        "gold_doc": "NONE",
+        "id": "HQ13",
+        "kind": "cross_topic_distractor",
+        "question": "What password protects the tax clinic portal?",
+        "refused": false,
+        "top1_doc": "B14",
+        "top1_score": 0.3212193864348099
+      },
+      {
+        "correct": false,
+        "gold_doc": "NONE",
+        "id": "HQ14",
+        "kind": "cross_topic_distractor",
+        "question": "Why does the fish tank heater keep tripping the fuse?",
+        "refused": false,
+        "top1_doc": "B16",
+        "top1_score": 0.3063502519380269
+      },
+      {
+        "correct": false,
+        "gold_doc": "NONE",
+        "id": "HQ15",
+        "kind": "cross_topic_distractor",
+        "question": "Which coffee filter fits an aquarium pump?",
+        "refused": false,
+        "top1_doc": "B17",
+        "top1_score": 0.3808244323578255
+      },
+      {
+        "correct": false,
+        "gold_doc": "NONE",
+        "id": "HQ16",
+        "kind": "cross_topic_distractor",
+        "question": "What telescope is best for photographing birds in daylight?",
+        "refused": false,
+        "top1_doc": "B22",
+        "top1_score": 0.32819893068869166
+      }
+    ],
+    "threshold": 0.3
+  },
+  "intervals": {
+    "refusal_precision": {
+      "k": 4,
+      "n": 4,
+      "point": 1.0,
+      "wilson95": [
+        0.5101091635454027,
+        1.0
+      ]
+    },
+    "refusal_recall": {
+      "k": 4,
+      "n": 4,
+      "point": 1.0,
+      "wilson95": [
+        0.5101091635454027,
+        1.0
+      ]
+    },
+    "sentence": {
+      "k": 20,
+      "n": 20,
+      "point": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ]
+    },
+    "top1": {
+      "k": 20,
+      "n": 20,
+      "point": 1.0,
+      "wilson95": [
+        0.8388748419471806,
+        1.0
+      ]
+    }
+  },
+  "scaling": {
+    "label": "synthetic scaling: the 24 documents replicated with new ids; wall clock, varies between runs",
+    "rows": [
+      {
+        "answer_latency_ms_mean": 0.14269320915142694,
+        "chunks": 72,
+        "documents": 24,
+        "factor": 1,
+        "index_build_ms": 1.1647781357169151
+      },
+      {
+        "answer_latency_ms_mean": 1.2606953775199752,
+        "chunks": 720,
+        "documents": 240,
+        "factor": 10,
+        "index_build_ms": 11.008028872311115
+      },
+      {
+        "answer_latency_ms_mean": 6.702703598421067,
+        "chunks": 3600,
+        "documents": 1200,
+        "factor": 50,
+        "index_build_ms": 53.18846693262458
+      },
+      {
+        "answer_latency_ms_mean": 13.726011791732162,
+        "chunks": 7200,
+        "documents": 2400,
+        "factor": 100,
+        "index_build_ms": 107.19260619953275
+      }
+    ]
+  },
+  "scenario": "rigor add-ons on the Build corpus and labelled set: Wilson intervals, leave-one-out refusal threshold, threshold curve, BM25 and document level baselines, chunk sweep, a hard question set, corpus scaling",
+  "threshold": {
+    "curve": [
+      {
+        "false_refusals": 0,
+        "missed_refusals": 4,
+        "refused": 0,
+        "threshold": 0.0,
+        "true_refusals": 0
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 3,
+        "refused": 1,
+        "threshold": 0.05,
+        "true_refusals": 1
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 3,
+        "refused": 1,
+        "threshold": 0.1,
+        "true_refusals": 1
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 3,
+        "refused": 1,
+        "threshold": 0.15,
+        "true_refusals": 1
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 3,
+        "refused": 1,
+        "threshold": 0.2,
+        "true_refusals": 1
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 0,
+        "refused": 4,
+        "threshold": 0.25,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 0,
+        "refused": 4,
+        "threshold": 0.3,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 0,
+        "refused": 4,
+        "threshold": 0.35,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 0,
+        "missed_refusals": 0,
+        "refused": 4,
+        "threshold": 0.4,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 1,
+        "missed_refusals": 0,
+        "refused": 5,
+        "threshold": 0.45,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 5,
+        "missed_refusals": 0,
+        "refused": 9,
+        "threshold": 0.5,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 9,
+        "missed_refusals": 0,
+        "refused": 13,
+        "threshold": 0.55,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 14,
+        "missed_refusals": 0,
+        "refused": 18,
+        "threshold": 0.6,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 18,
+        "missed_refusals": 0,
+        "refused": 22,
+        "threshold": 0.65,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 19,
+        "missed_refusals": 0,
+        "refused": 23,
+        "threshold": 0.7,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 20,
+        "missed_refusals": 0,
+        "refused": 24,
+        "threshold": 0.75,
+        "true_refusals": 4
+      },
+      {
+        "false_refusals": 20,
+        "missed_refusals": 0,
+        "refused": 24,
+        "threshold": 0.8,
+        "true_refusals": 4
+      }
+    ],
+    "fitted_on_all_24": 0.3383865641279152,
+    "leave_one_out": {
+      "refusal_false_negative": 0,
+      "refusal_false_positive": 0,
+      "refusal_true_positive": 4,
+      "threshold_max": 0.3564780554097898,
+      "threshold_min": 0.33500877383712313
+    },
+    "tuned": 0.3
+  }
+}
