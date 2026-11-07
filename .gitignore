@@ -12,3 +12,8 @@ secrets/
 # Build corpus is committed data, not a data dump (2026-11-05)
 !level-2-build/data/
 !level-2-build/data/*.txt
+
+# Live dashboard build output and local browser-gate screenshots
+site/node_modules/
+site/dist/
+site/.rubric/
