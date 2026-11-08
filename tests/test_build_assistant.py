@@ -12,7 +12,7 @@ import tempfile
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 from assistant import (  # noqa: E402
     ANSWER_SENTENCES,
     CHUNK_OVERLAP_WORDS,
@@ -31,7 +31,7 @@ from assistant import (  # noqa: E402
     split_sentences,
 )
 
-DATA = os.path.join(ROOT, "level-2-build", "data")
+DATA = os.path.join(ROOT, "experiments", "corpus")
 
 
 class TestChunkingHandComputed(unittest.TestCase):
@@ -239,7 +239,7 @@ class TestPrivacyGuard(unittest.TestCase):
                      ("url", "open"), ("http", ".client"),
                      ("ft", "plib"), ("sm", "tplib")]
         patterns = [a + b for a, b in fragments]
-        path = os.path.join(ROOT, "level-2-build", "assistant.py")
+        path = os.path.join(ROOT, "src", "assistant.py")
         with open(path, encoding="utf-8") as f:
             text = f.read()
         for pattern in patterns:
@@ -252,7 +252,7 @@ class TestPrivacyGuard(unittest.TestCase):
                 self.assertNotIn(pattern, line)
 
     def test_audit_of_all_build_sources_passes(self):
-        here = os.path.join(ROOT, "level-2-build")
+        here = os.path.join(ROOT, "src")
         texts = {}
         for name in ("assistant.py", "run_build.py"):
             with open(os.path.join(here, name), encoding="utf-8") as f:

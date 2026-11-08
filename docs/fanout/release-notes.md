@@ -16,7 +16,6 @@ https://github.com/JesunAhmadUshno/local-first-ai/releases
 - Measured result: 10 labelled questions, top-1 1.000, recall
   at 3 1.000, answer sentence accuracy 1.000, privacy audit
   clean (2 files, 7 patterns, 0 matches).
-- Level grade: 8,700 of 10,000.
 - Release: https://github.com/JesunAhmadUshno/local-first-ai/releases/tag/v0.1
 
 ## v0.5, Build (2026-11-05)
@@ -29,7 +28,6 @@ https://github.com/JesunAhmadUshno/local-first-ai/releases
   top-1 1.000, chunk recall at 3 1.000, sentence 1.000, refusal
   precision and recall 1.000, privacy audit clean, session
   memory 3 entries reloaded identically.
-- Level grade: 7,100 of 10,000.
 - Release: https://github.com/JesunAhmadUshno/local-first-ai/releases/tag/v0.5
 
 ## v1.0, Learn, Build, and Deep (2026-11-05)
@@ -45,7 +43,6 @@ https://github.com/JesunAhmadUshno/local-first-ai/releases
   flagship rates (3.11 to 62.13 USD per 100,000 queries) at
   163.33 input and 29.46 output tokens per query. Cloud quality
   and latency not measured.
-- Level grade: 7,400 of 10,000.
 - Release: https://github.com/JesunAhmadUshno/local-first-ai/releases/tag/v1.0
 
 ## Held channels

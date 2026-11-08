@@ -31,17 +31,16 @@ scores are weak evidence.
 Learn: a TF-IDF core over 8 synthetic documents (24 sentences,
 196 words), 10 labelled questions. Top-1 accuracy 1.000, recall
 at 3 1.000, answer sentence accuracy 1.000, privacy audit clean
-(2 files, 7 network patterns, 0 matches). Grade 8,700 of 10,000.
+(2 files, 7 network patterns, 0 matches).
 
 Build: a chunked pipeline over 24 synthetic documents (144
 sentences, 72 chunks at 30 words per chunk with 10 words overlap),
 24 labelled questions (20 evidence, 4 no-evidence), persistent
 session memory (3 entries recorded, 3 reloaded identically), and
-a refusal rule at threshold 0.30. Grade 7,100 of 10,000.
+a refusal rule at threshold 0.30.
 
 Deep: the local against cloud study. Local side measured with the
 Build pipeline. Cloud side modelled from published pricing only.
-Grade 7,400 of 10,000.
 
 ## The main result
 

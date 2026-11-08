@@ -3,6 +3,7 @@
 Module: P15-local-first-ai
 By Jesun Ahmad Ushno
 Date: 2026-11-05
+Paths updated 2026-11-08 for the portfolio standard v2 layout (code in src/, results in results/, corpus in experiments/corpus/).
 License for this tutorial: CC BY 4.0. Code in the repo: Apache-2.0.
 
 ## What you will do
@@ -31,31 +32,31 @@ cd local-first-ai
 Optional smoke check, before the levels:
 
 ```text
-python tests/test_smoke.py
+python -m unittest tests.test_layout -v
 ```
 
 Expected: scaffold smoke test: PASS, 8 files present.
 
 ## Step 1: Level 1, Learn, TF-IDF core with privacy audit
 
-Read level-1-learn/README.md first.
+Read the Learn section of REPORT.md first.
 
 ```text
-python level-1-learn/run_learn.py
+python src/run_learn.py
 python -m unittest tests.test_learn_local_first -v
 ```
 
 Expected: 8 documents, 10 questions; top1 10 of 10 = 1.0;
 recall at 3 10 of 10 = 1.0; sentence 10 of 10 = 1.0; audit
 passed with 0 matches. The runner writes
-level-1-learn/results_learn.json deterministically.
+results/results_learn.json deterministically.
 
 ## Step 2: Level 2, Build, chunked assistant pipeline
 
-Read level-2-build/README.md and level-2-build/BUILD-SPEC.md.
+Read the Build sections of REPORT.md and PROPOSAL.md.
 
 ```text
-python level-2-build/run_build.py
+python src/run_build.py
 python -m unittest tests.test_build_assistant -v
 ```
 
@@ -63,14 +64,14 @@ Expected: 24 documents, 72 chunks, 24 questions; top1 20 of 20
 = 1.0; chunk recall at 3 20 of 20 = 1.0; sentence 20 of 20 =
 1.0; refusal precision 1.0, recall 1.0 (4 of 4 no-evidence
 refused at threshold 0.30); audit passed; session reload true.
-The runner writes level-2-build/results_build.json.
+The runner writes results/results_build.json.
 
 ## Step 3: Level 3, Deep, local against cloud study
 
-Read level-3-deep/README.md and level-3-deep/DEEP-SPEC.md.
+Read the Deep sections of REPORT.md and PROPOSAL.md.
 
 ```text
-python level-3-deep/run_deep.py
+python src/run_deep.py
 python -m unittest tests.test_deep_study -v
 ```
 
@@ -86,7 +87,7 @@ and latency are not measured in this step.
 
 ```text
 python -m unittest discover -s tests -v
-python tests/test_smoke.py
+python -m unittest tests.test_layout -v
 ```
 
 Expected: 62 tests, all passing, plus the scaffold smoke test.

@@ -13,8 +13,7 @@ import tempfile
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
-sys.path.insert(0, os.path.join(ROOT, "level-3-deep"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 from assistant import ChunkIndex, Session, build_questions, evaluate, ingest_directory  # noqa: E402
 
 
@@ -43,7 +42,7 @@ class RuntimeEgressTest(unittest.TestCase):
             socket.create_connection(("127.0.0.1", 9))
 
     def test_full_pipeline_runs_offline(self):
-        docs = ingest_directory(os.path.join(ROOT, "level-2-build", "data"))
+        docs = ingest_directory(os.path.join(ROOT, "experiments", "corpus"))
         index = ChunkIndex(docs)
         summary = evaluate(index, build_questions())["summary"]
         self.assertEqual(summary["top1_correct"], 20)
@@ -57,7 +56,7 @@ class RuntimeEgressTest(unittest.TestCase):
 
     def test_rigor_runs_offline(self):
         import rigor
-        docs = ingest_directory(os.path.join(ROOT, "level-2-build", "data"))
+        docs = ingest_directory(os.path.join(ROOT, "experiments", "corpus"))
         hard = rigor.evaluate_hard(ChunkIndex(docs), rigor.hard_questions())
         self.assertEqual(hard["paraphrase_questions"], 10)
 

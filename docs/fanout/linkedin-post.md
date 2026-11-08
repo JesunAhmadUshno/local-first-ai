@@ -39,8 +39,7 @@ distinct topics, so those perfect scores are weak evidence.
 Local wins cost, speed on this corpus, and privacy. Cloud wins
 capability: generation, paraphrase, and synthesis.
 
-Grades, house scale: Learn 8,700, Build 7,100, Deep 7,400 of
-10,000. 62 tests in total, plus the smoke test.
+62 tests in total, plus the smoke test.
 
 When would you keep a document assistant local even if a cloud
 model answers better?

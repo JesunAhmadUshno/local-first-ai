@@ -1,6 +1,6 @@
 """Run the Deep study and write results_deep.json.
 
-Run: python level-3-deep/run_deep.py
+Run: python src/run_deep.py
 
 The deterministic part of the output (quality, token model,
 modelled cloud costs, privacy, verdict) is identical across
@@ -120,7 +120,7 @@ def main():
           f"{t['queries_timed']} timed answers")
     print(f"Deep audit passed={audit['passed']} "
           f"total={audit['total_matches']}")
-    path = os.path.join(HERE, "results_deep.json")
+    path = os.path.join(os.path.dirname(HERE), "results", "results_deep.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, sort_keys=True)
         f.write("\n")

@@ -24,9 +24,7 @@ import time
 from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
-sys.path.insert(0, os.path.join(ROOT, "level-1-learn"))
+sys.path.insert(0, HERE)
 from assistant import REFUSAL_THRESHOLD, ChunkIndex, chunk_all, evaluate  # noqa: E402
 from local_first import tokenize  # noqa: E402
 

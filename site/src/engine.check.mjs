@@ -6,17 +6,17 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   ChunkIndex, ingest, evaluate, questionsFrom, refusalAt, leaveOneOut, fitThreshold, wilson,
-  costPerQuery, parseLearnSource, learnAnswer, parseGrade, bullets, ciCommands, REFUSAL_THRESHOLD,
+  costPerQuery, parseLearnSource, learnAnswer, parseVerdict, bullets, ciCommands, REFUSAL_THRESHOLD,
 } from './engine.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
 const json = (p) => JSON.parse(read(p));
-const build = json('level-2-build/results_build.json');
-const learn = json('level-1-learn/results_learn.json');
-const deep = json('level-3-deep/results_deep.json');
-const rigor = json('level-3-deep/results_rigor.json');
-const dataDir = path.join(root, 'level-2-build/data');
+const build = json('results/results_build.json');
+const learn = json('results/results_learn.json');
+const deep = json('results/results_deep.json');
+const rigor = json('results/results_rigor.json');
+const dataDir = path.join(root, 'experiments/corpus');
 const files = Object.fromEntries(fs.readdirSync(dataDir).filter((n) => n.endsWith('.txt')).map((n) => [n, fs.readFileSync(path.join(dataDir, n), 'utf8')]));
 
 // 1. Build pipeline parity: every recorded question, to 1e-9 on the score.
@@ -40,7 +40,7 @@ live.rows.forEach((r, i) => {
 for (const k of Object.keys(live.summary)) if (k in build.summary) assert.equal(live.summary[k], build.summary[k], `summary ${k}`);
 
 // 2. Learn level parity: corpus and questions read from local_first.py source.
-const L = parseLearnSource(read('level-1-learn/local_first.py'));
+const L = parseLearnSource(read('src/local_first.py'));
 assert.equal(L.docs.length, learn.summary.documents);
 assert.equal(L.questions.length, learn.summary.questions);
 L.questions.forEach((q, i) => {
@@ -97,12 +97,12 @@ for (const row of deep.cloud_costs_modelled.rows) {
 const meanIn = tm.per_query.reduce((a, r) => a + r.input_tokens_est, 0) / tm.per_query.length;
 assert.ok(Math.abs(meanIn - tm.mean_input_tokens_est) < 1e-12, 'per-query tokens average to the recorded mean');
 
-// 8. Text parsed from the repo docs: grades, limits, CI commands.
-const grades = ['level-1-learn', 'level-2-build', 'level-3-deep'].map((l) => parseGrade(read(`${l}/README.md`)));
-assert.ok(grades.every(Number.isFinite), 'three grades parsed');
-assert.ok(read('docs/index.md').includes(`Learn ${grades[0].toLocaleString('en-US')}, Build ${grades[1].toLocaleString('en-US')}, Deep ${grades[2].toLocaleString('en-US')}`), 'grades agree with docs/index.md');
-assert.ok(bullets(read('level-2-build/README.md'), 'Failure modes and limits').length >= 8, 'build limits parsed');
-assert.ok(bullets(read('level-3-deep/README.md'), 'Failure modes and limits').length >= 6, 'deep limits parsed');
-assert.ok(ciCommands(read('.github/workflows/ci.yml')).some((c) => c.includes('run_build.py')), 'ci commands parsed');
+// 8. Text parsed from the repo docs: verdict, limits, CI commands.
+const verdict = parseVerdict(read('README.md'));
+assert.ok(verdict && /^(Draft|Proposed|Functional|Evaluated|v1\.0 Released)\b/.test(verdict), 'README verdict parsed');
+assert.ok(!/of 10,0{3}|Grad[e]:/.test(read('README.md') + read('REPORT.md')), 'no public grade');
+assert.ok(bullets(read('REPORT.md'), 'Build failure modes and limits').length >= 8, 'build limits parsed');
+assert.ok(bullets(read('REPORT.md'), 'Deep failure modes and limits').length >= 6, 'deep limits parsed');
+assert.ok(ciCommands(read('.github/workflows/ci.yml')).some((c) => c.includes('check_results.py')), 'ci commands parsed');
 
-console.log('engine ok', { questions: live.rows.length, maxScoreDiff: maxDiff, learn: L.questions.length, sweepRows: rigor.chunk_sweep.length, hardRows: rigor.hard_set.rows.length, grades });
+console.log('engine ok', { questions: live.rows.length, maxScoreDiff: maxDiff, learn: L.questions.length, sweepRows: rigor.chunk_sweep.length, hardRows: rigor.hard_set.rows.length, verdict: verdict.split('.')[0] });

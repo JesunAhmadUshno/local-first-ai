@@ -5,15 +5,17 @@ name: Pages
 # npm run build runs site/src/engine.check.mjs first, so a drift between the in-browser
 # port and the recorded Python results fails the deploy.
 # The Pages source must be set to "GitHub Actions" (build_type workflow) for this to deploy;
-# it replaces the earlier legacy build of docs/index.md, which stays in the repo as a file.
+# it replaced the earlier legacy build of docs/index.md (removed 2026-11-08).
 on:
   push:
     branches: [main]
     paths:
       - 'site/**'
-      - 'level-1-learn/**'
-      - 'level-2-build/**'
-      - 'level-3-deep/**'
+      - 'src/**'
+      - 'experiments/**'
+      - 'results/**'
+      - 'README.md'
+      - 'REPORT.md'
       - 'docs/**'
       - '.github/workflows/ci.yml'
       - '.github/workflows/pages.yml'

@@ -1,6 +1,6 @@
 """Run the rigor add-ons and write results_rigor.json.
 
-Run: python level-3-deep/run_rigor.py
+Run: python src/run_rigor.py
 
 Everything except the "scaling" block is deterministic. The
 scaling block is wall clock timing and varies between runs.
@@ -12,10 +12,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import rigor  # noqa: E402
-from rigor import ChunkIndex, evaluate  # noqa: E402
-
-sys.path.insert(0, os.path.join(os.path.dirname(HERE), "level-2-build"))
 from assistant import build_questions, ingest_directory  # noqa: E402
+from rigor import ChunkIndex, evaluate  # noqa: E402
 
 SWEEP_GRID = [(size, overlap) for size in (10, 15, 20, 30, 40, 60, 100) for overlap in (0, 5, 10, 20)]
 SCALING_FACTORS = (1, 10, 50, 100)
@@ -27,7 +25,7 @@ def interval(k, n):
 
 
 def main():
-    docs = ingest_directory(os.path.join(os.path.dirname(HERE), "level-2-build", "data"))
+    docs = ingest_directory(os.path.join(os.path.dirname(HERE), "experiments", "corpus"))
     questions = build_questions()
     build = evaluate(ChunkIndex(docs), questions)
     s = build["summary"]
@@ -74,7 +72,7 @@ def main():
     print("BM25:", out["baselines"]["bm25_chunks_30_10"], "doc level:", doc_level)
     for row in out["scaling"]["rows"]:
         print("scaling:", row)
-    path = os.path.join(HERE, "results_rigor.json")
+    path = os.path.join(os.path.dirname(HERE), "results", "results_rigor.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, sort_keys=True)
         f.write("\n")
