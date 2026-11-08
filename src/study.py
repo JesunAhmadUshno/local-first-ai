@@ -18,10 +18,7 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-BUILD_DIR = os.path.join(ROOT, "level-2-build")
-LEARN_DIR = os.path.join(ROOT, "level-1-learn")
-sys.path.insert(0, BUILD_DIR)
-sys.path.insert(0, LEARN_DIR)
+sys.path.insert(0, HERE)
 from assistant import ChunkIndex, build_questions, evaluate, ingest_directory  # noqa: E402
 from local_first import audit_sources  # noqa: E402
 
@@ -189,7 +186,7 @@ def run_local_measurement(rounds=5):
     """
     if not isinstance(rounds, int) or rounds < 1:
         raise DeepError("rounds must be a positive integer")
-    docs = ingest_directory(os.path.join(BUILD_DIR, "data"))
+    docs = ingest_directory(os.path.join(ROOT, "experiments", "corpus"))
     questions = build_questions()
     build_samples_ms = []
     index = None

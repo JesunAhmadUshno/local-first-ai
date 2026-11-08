@@ -23,8 +23,7 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-LEARN_DIR = os.path.join(os.path.dirname(HERE), "level-1-learn")
-sys.path.insert(0, LEARN_DIR)
+sys.path.insert(0, HERE)
 from local_first import (  # noqa: E402
     LocalFirstError,
     audit_sources,

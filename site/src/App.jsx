@@ -1,19 +1,18 @@
 import { useMemo, useState, useEffect, useRef, useId, useCallback } from 'react';
-import build from '../../level-2-build/results_build.json';
-import learn from '../../level-1-learn/results_learn.json';
-import deep from '../../level-3-deep/results_deep.json';
-import rigor from '../../level-3-deep/results_rigor.json';
-import learnReadme from '../../level-1-learn/README.md?raw';
-import buildReadme from '../../level-2-build/README.md?raw';
-import deepReadme from '../../level-3-deep/README.md?raw';
+import build from '../../results/results_build.json';
+import learn from '../../results/results_learn.json';
+import deep from '../../results/results_deep.json';
+import rigor from '../../results/results_rigor.json';
+import readmeMd from '../../README.md?raw';
+import reportMd from '../../REPORT.md?raw';
 import ciYml from '../../.github/workflows/ci.yml?raw';
 import {
   ChunkIndex, ingest, evaluate, questionsFrom, refusalAt, leaveOneOut, wilson, costPerQuery,
-  parseGrade, bullets, ciCommands, REFUSAL_THRESHOLD, CHUNK_SIZE_WORDS, CHUNK_OVERLAP_WORDS,
+  parseVerdict, bullets, ciCommands, REFUSAL_THRESHOLD, CHUNK_SIZE_WORDS, CHUNK_OVERLAP_WORDS,
 } from './engine.js';
 
-// The real corpus, read from level-2-build/data at build time.
-const files = Object.fromEntries(Object.entries(import.meta.glob('../../level-2-build/data/*.txt', { query: '?raw', import: 'default', eager: true }))
+// The real corpus, read from experiments/corpus at build time.
+const files = Object.fromEntries(Object.entries(import.meta.glob('../../experiments/corpus/*.txt', { query: '?raw', import: 'default', eager: true }))
   .map(([p, text]) => [p.split('/').pop(), text]));
 const DOCS = ingest(files);
 const INDEX = new ChunkIndex(DOCS);
@@ -22,9 +21,9 @@ const HARD = rigor.hard_set.rows;
 const RECORDED = build.questions;
 const S = build.summary;
 const T = deep.timing;
-const BUILD_LIMITS = bullets(buildReadme, 'Failure modes and limits');
-const DEEP_LIMITS = bullets(deepReadme, 'Failure modes and limits');
-const GRADES = [['Learn', parseGrade(learnReadme), 'level-1-learn/README.md'], ['Build', parseGrade(buildReadme), 'level-2-build/README.md'], ['Deep', parseGrade(deepReadme), 'level-3-deep/README.md']];
+const BUILD_LIMITS = bullets(reportMd, 'Build failure modes and limits');
+const DEEP_LIMITS = bullets(reportMd, 'Deep failure modes and limits');
+const VERDICT = parseVerdict(readmeMd);
 
 const REPO = 'https://github.com/JesunAhmadUshno/local-first-ai';
 const blob = (p) => `${REPO}/blob/main/${p}`;
@@ -53,10 +52,10 @@ function MenuBar() {
     <div className="menubar" role="banner">
       <span className="apple" aria-hidden="true">◆</span>
       <a className="app" href="#top">Local-First Lab</a>
-      <a className="m" href={blob('level-1-learn/README.md')}>Learn</a>
-      <a className="m" href={blob('level-2-build/README.md')}>Build</a>
-      <a className="m" href={blob('level-3-deep/README.md')}>Deep</a>
-      <a className="m" href={blob('docs/research-review.md')}>Research review</a>
+      <a className="m" href={blob('README.md')}>Abstract</a>
+      <a className="m" href={blob('PROPOSAL.md')}>Proposal</a>
+      <a className="m" href={blob('REPORT.md')}>Report</a>
+      <a className="m" href={blob('REPORT.md#review-findings-2026-11-07')}>Research review</a>
       <span className="spacer" />
       <span className="status"><i /> Runs offline</span>
       <a href={REPO}>GitHub ↗</a>
@@ -113,7 +112,7 @@ export default function App() {
       <Reproduce />
       <Dock />
       <footer>
-        Corpus: 24 synthetic documents committed in <code>level-2-build/data</code>. Code: Apache-2.0. Every number on this page is read from the repo's results and README files at build time or computed live in your browser by a port that the build checks against those results.
+        Corpus: 24 synthetic documents committed in <code>experiments/corpus</code>. Code: Apache-2.0. Every number on this page is read from the repo's results and README files at build time or computed live in your browser by a port that the build checks against those results.
       </footer>
     </div>
   );
@@ -136,7 +135,7 @@ function Hero() {
       </div>
       <div className="actions">
         <a className="btn primary" href="#ask">Ask the documents</a>
-        <a className="btn ghost" href={blob('docs/research-review.md')}>Read the research review</a>
+        <a className="btn ghost" href={blob('REPORT.md')}>Read the report</a>
         <span className="hint">The pipeline on this page runs in your browser and matches the Python results to the last digit.</span>
       </div>
       <div className="tiles">
@@ -145,7 +144,7 @@ function Hero() {
         <div className="tile"><div className="num">{S.refusal_true_positive}/{S.no_evidence_questions}</div><div className="cap">No-evidence questions refused, {S.refusal_false_positive} false refusals. {ivText(S.refusal_true_positive, S.no_evidence_questions)}</div></div>
         <div className="tile"><div className="num">{T.answer_latency_ms_mean.toFixed(2)}<small> ms</small></div><div className="cap">Mean answer latency, {T.queries_timed} recorded answers on the study VM</div></div>
       </div>
-      <p className="hint caveat">Read the perfect scores as weak evidence. From the Build README: “{BUILD_LIMITS[0]}”</p>
+      <p className="hint caveat">Read the perfect scores as weak evidence. From REPORT.md (Build limits): “{BUILD_LIMITS[0]}”</p>
     </header>
   );
 }
@@ -184,7 +183,7 @@ function Ask() {
           <p className="eyebrow">Live · computed in your browser</p>
           <h2>Ask the {DOCS.length} documents. Nothing leaves this tab.</h2>
           <p className="sub">
-            A line-for-line port of <a href={blob('level-2-build/assistant.py')}>assistant.py</a>: {INDEX.chunks.length} chunks of {CHUNK_SIZE_WORDS} words with {CHUNK_OVERLAP_WORDS} overlap, TF-IDF cosine ranking, the two best sentences of the top document with a citation each, and a refusal below {REFUSAL_THRESHOLD.toFixed(2)}.
+            A line-for-line port of <a href={blob('src/assistant.py')}>assistant.py</a>: {INDEX.chunks.length} chunks of {CHUNK_SIZE_WORDS} words with {CHUNK_OVERLAP_WORDS} overlap, TF-IDF cosine ranking, the two best sentences of the top document with a citation each, and a refusal below {REFUSAL_THRESHOLD.toFixed(2)}.
             Try a question in your own words: exact token matching means synonyms usually miss.
           </p>
         </div>
@@ -253,7 +252,7 @@ function Evaluation() {
           <p className="eyebrow">Live rerun · checked against the record</p>
           <h2>The labelled set, rerun in your browser, matches the Python run.</h2>
           <p className="sub">
-            Each row is computed now and compared with <a href={blob('level-2-build/results_build.json')}>results_build.json</a>: same top document, same refusal, and the same top-1 score to within 1e-9.
+            Each row is computed now and compared with <a href={blob('results/results_build.json')}>results_build.json</a>: same top document, same refusal, and the same top-1 score to within 1e-9.
             The hard set was written for the research review to probe the ceiling: synonym paraphrases and cross-topic distractors. It shows where exact matching breaks.
           </p>
         </div>
@@ -400,7 +399,7 @@ function Chunking() {
           <h2>Change the chunk size and the whole index rebuilds.</h2>
           <p className="sub">
             Each move re-chunks the {DOCS.length} real documents, rebuilds the TF-IDF index and reruns all {QUESTIONS.length} labelled questions with the {REFUSAL_THRESHOLD.toFixed(2)} threshold.
-            The repo records only the default {CHUNK_SIZE_WORDS}/{CHUNK_OVERLAP_WORDS}; the numbers here are computed live. The build checks the port against a {rigor.chunk_sweep.length}-point sweep in <a href={blob('level-3-deep/results_rigor.json')}>results_rigor.json</a>.
+            The repo records only the default {CHUNK_SIZE_WORDS}/{CHUNK_OVERLAP_WORDS}; the numbers here are computed live. The build checks the port against a {rigor.chunk_sweep.length}-point sweep in <a href={blob('results/results_rigor.json')}>results_rigor.json</a>.
           </p>
         </div>
         <span className={`pill ${isDefault ? 'good' : 'info'}`}>{isDefault ? '● Recorded default' : recorded ? '● Also in the recorded sweep' : '● Computed live only'}</span>
@@ -437,7 +436,7 @@ function Cost() {
           <p className="eyebrow">Calculator · modelled, never measured</p>
           <h2>Local costs nothing per query. Cloud cost is a <em>model</em>.</h2>
           <p className="sub">
-            Cost = input tokens × input rate + output tokens × output rate, per million, the formula in <a href={blob('level-3-deep/study.py')}>study.py</a>, at {tm.mean_input_tokens_est.toFixed(2)} input and {tm.mean_output_tokens_est.toFixed(2)} output tokens per query.
+            Cost = input tokens × input rate + output tokens × output rate, per million, the formula in <a href={blob('src/study.py')}>study.py</a>, at {tm.mean_input_tokens_est.toFixed(2)} input and {tm.mean_output_tokens_est.toFixed(2)} output tokens per query.
             Tokens are estimated by a word rule ({tm.estimator}). Rates and model names are exactly as recorded on {deep.pricing_checked}; they are a dated snapshot. No API was called. Local side: {deep.cloud_costs_modelled.local_cost_note}.
           </p>
         </div>
@@ -500,7 +499,7 @@ function Latency() {
           <p className="eyebrow">Recorded replay · plus a live timer</p>
           <h2>Sub-millisecond answers, on a corpus of {S.chunks} chunks.</h2>
           <p className="sub">
-            Recorded on the study VM by <a href={blob('level-3-deep/run_deep.py')}>run_deep.py</a>: mean {ms(T.answer_latency_ms_mean)}, median {ms(T.answer_latency_ms_median)}, range {ms(T.answer_latency_ms_min)} to {ms(T.answer_latency_ms_max)}.
+            Recorded on the study VM by <a href={blob('src/run_deep.py')}>run_deep.py</a>: mean {ms(T.answer_latency_ms_mean)}, median {ms(T.answer_latency_ms_median)}, range {ms(T.answer_latency_ms_min)} to {ms(T.answer_latency_ms_max)}.
             The cloud figure is {deep.cloud_latency_assumption.label}: {deep.cloud_latency_assumption.note}. The axis is logarithmic.
           </p>
         </div>
@@ -525,7 +524,7 @@ function Latency() {
             <polyline fill="none" stroke="var(--primary)" strokeWidth="2.5" points={sc.map((s) => `${sx(s.chunks)},${sy(s.answer_latency_ms_mean)}`).join(' ')} />
             {sc.map((s) => <g key={s.factor}><circle cx={sx(s.chunks)} cy={sy(s.answer_latency_ms_mean)} r="4.5" fill="var(--primary)" /><text x={sx(s.chunks)} y={SH - 8} textAnchor="middle">{fmt(s.chunks)}</text></g>)}
           </svg>
-          <p className="hint">ms per answer (y) against chunks (x). Recorded by <a href={blob('level-3-deep/run_rigor.py')}>run_rigor.py</a>; {rigor.scaling.label}.</p>
+          <p className="hint">ms per answer (y) against chunks (x). Recorded by <a href={blob('src/run_rigor.py')}>run_rigor.py</a>; {rigor.scaling.label}.</p>
         </div>
         <div style={{ overflowX: 'auto' }}>
           <table>
@@ -583,10 +582,8 @@ function Verdict() {
         <details className="tile"><summary><b>Build failure modes and limits ({BUILD_LIMITS.length})</b></summary><ul className="limits">{BUILD_LIMITS.map((b) => <li key={b}>{b}</li>)}</ul></details>
         <details className="tile"><summary><b>Deep failure modes and limits ({DEEP_LIMITS.length})</b></summary><ul className="limits">{DEEP_LIMITS.map((b) => <li key={b}>{b}</li>)}</ul></details>
       </div>
-      <h3 style={{ marginTop: 20 }}>Self-graded in the repo <span className="hint">· the authors' own grades, not external review</span></h3>
-      <div className="tiles" style={{ gridTemplateColumns: 'repeat(3, minmax(0, 1fr))' }}>
-        {GRADES.map(([k, g, p]) => <div className="tile" key={k}><div className="num">{fmt(g)}</div><div className="cap">{k} of 10,000 · <a href={blob(p)}>deductions</a></div></div>)}
-      </div>
+      <h3 style={{ marginTop: 20 }}>Verdict under the portfolio standard <span className="hint">· read from the README abstract</span></h3>
+      <p>{VERDICT} <a href={blob('README.md')}>README</a></p>
     </section>
   );
 }

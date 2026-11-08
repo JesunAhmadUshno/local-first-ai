@@ -24,8 +24,7 @@ language model in any level: Ollama was rechecked unavailable on
 side is modelled only, never measured.
 
 Status: v1.0, 2026-11-05. Learn, Build, and Deep are done.
-Grades on the house 10,000 scale: Learn 8,700, Build 7,100,
-Deep 7,400. Total tests: 62, plus the scaffold smoke test.
+Total tests: 62, plus the scaffold smoke test.
 
 ## Results
 

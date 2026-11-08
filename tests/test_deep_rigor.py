@@ -5,14 +5,12 @@ import sys
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-3-deep"))
-sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
-sys.path.insert(0, os.path.join(ROOT, "level-1-learn"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 import rigor  # noqa: E402
 from assistant import build_questions, ingest_directory  # noqa: E402
 from local_first import audit_sources  # noqa: E402
 
-DATA = os.path.join(ROOT, "level-2-build", "data")
+DATA = os.path.join(ROOT, "experiments", "corpus")
 
 
 class WilsonTest(unittest.TestCase):
@@ -111,7 +109,7 @@ class RigorAuditTest(unittest.TestCase):
     def test_rigor_sources_pass_the_network_audit(self):
         texts = {}
         for name in ("rigor.py", "run_rigor.py"):
-            with open(os.path.join(ROOT, "level-3-deep", name), encoding="utf-8") as f:
+            with open(os.path.join(ROOT, "src", name), encoding="utf-8") as f:
                 texts[name] = f.read()
         self.assertTrue(audit_sources(texts)["passed"])
 

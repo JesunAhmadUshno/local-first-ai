@@ -1,7 +1,7 @@
 // In-browser port of the repo's retrieval pipeline.
-// Mirrors level-1-learn/local_first.py (tokenize, idf, tf-idf, cosine) and
-// level-2-build/assistant.py (ingest, chunking, ranking, answer, refusal, evaluate),
-// plus level-3-deep/study.py (modelled cost) and level-3-deep/rigor.py (Wilson,
+// Mirrors src/local_first.py (tokenize, idf, tf-idf, cosine) and
+// src/assistant.py (ingest, chunking, ranking, answer, refusal, evaluate),
+// plus src/study.py (modelled cost) and src/rigor.py (Wilson,
 // leave-one-out threshold). engine.check.mjs asserts it reproduces the recorded results.
 
 export const STOPWORDS = new Set([
@@ -222,18 +222,19 @@ export function learnAnswer(docs, question) {
   return { top1_doc: ranked[0].doc_id, top1_score: ranked[0].score, top3: ranked.slice(0, 3).map((r) => r.doc_id), answer_sentence: `S${best.i + 1}` };
 }
 
-// "Grade: 7,100 of 10,000" from a level README.
-export function parseGrade(md) {
-  const m = md.match(/^Grade: ([\d,]+) of 10,000/m);
-  return m ? Number(m[1].replace(/,/g, '')) : null;
+// The "**Verdict.**" paragraph of the README abstract, joined across wrapped lines.
+export function parseVerdict(md) {
+  const m = md.match(/^\*\*Verdict\.\*\* ([\s\S]*?)(?:\n\s*\n|$)/m);
+  return m ? m[1].replace(/\s*\n\s*/g, ' ').trim() : null;
 }
 
-// Bullets under a "## <heading>" in a README, joined across wrapped lines.
+// Bullets under a "## <heading>" (any level) in a markdown file, joined across wrapped
+// lines; the block ends at the next heading of any level.
 export function bullets(md, heading) {
   const start = md.indexOf(`## ${heading}`);
   if (start < 0) return [];
   const rest = md.slice(start).split('\n').slice(1);
-  const end = rest.findIndex((l) => l.startsWith('## '));
+  const end = rest.findIndex((l) => /^#{1,6} /.test(l));
   const block = (end < 0 ? rest : rest.slice(0, end)).join('\n');
   return block.split(/\n- /).slice(1).map((b) => b.replace(/\s*\n\s*/g, ' ').trim());
 }

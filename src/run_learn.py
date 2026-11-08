@@ -1,7 +1,7 @@
 """Run the Learn evaluation and write deterministic results.
 
-Run: python level-1-learn/run_learn.py
-Writes level-1-learn/results_learn.json. No timestamps, no
+Run: python src/run_learn.py
+Writes results/results_learn.json. No timestamps, no
 randomness, no wall clock values, so two runs produce an
 identical file. The privacy audit reads this level's own two
 source files as local text and scans them for network patterns.
@@ -49,7 +49,7 @@ def main():
                        "extractive cited answers, privacy audit",
            "summary": s, "questions": result["questions"],
            "inventory": inventory, "audit": audit}
-    path = os.path.join(HERE, "results_learn.json")
+    path = os.path.join(os.path.dirname(HERE), "results", "results_learn.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, sort_keys=True)
         f.write("\n")

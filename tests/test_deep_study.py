@@ -10,7 +10,7 @@ import sys
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-3-deep"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 from study import (  # noqa: E402
     CLOUD_LATENCY_ASSUMED_MS,
     PRICING_MODELS,
@@ -174,7 +174,7 @@ class TestMeasuredLocalSide(unittest.TestCase):
 
 class TestPrivacyGuard(unittest.TestCase):
     def test_deep_sources_pass_the_audit(self):
-        here = os.path.join(ROOT, "level-3-deep")
+        here = os.path.join(ROOT, "src")
         texts = {}
         for name in ("study.py", "run_deep.py"):
             with open(os.path.join(here, name), encoding="utf-8") as f:
@@ -186,7 +186,7 @@ class TestPrivacyGuard(unittest.TestCase):
         self.assertTrue(audit["passed"])
 
     def test_results_file_labels_modelled_and_assumed(self):
-        path = os.path.join(ROOT, "level-3-deep", "results_deep.json")
+        path = os.path.join(ROOT, "results", "results_deep.json")
         if not os.path.exists(path):
             self.skipTest("results_deep.json not generated yet")
         with open(path, encoding="utf-8") as f:

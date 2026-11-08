@@ -1,7 +1,7 @@
 """Run the Build evaluation and write deterministic results.
 
-Run: python level-2-build/run_build.py
-Writes level-2-build/results_build.json. No timestamps, no
+Run: python src/run_build.py
+Writes results/results_build.json. No timestamps, no
 randomness, no wall clock values, so two runs produce an
 identical file. The run also exercises the session memory: it
 records three questions into a fresh session file, reloads the
@@ -31,7 +31,7 @@ SOURCE_FILES = ("assistant.py", "run_build.py")
 
 
 def main():
-    docs = ingest_directory(os.path.join(HERE, "data"))
+    docs = ingest_directory(os.path.join(os.path.dirname(HERE), "experiments", "corpus"))
     index = ChunkIndex(docs)
     inventory = corpus_inventory(docs)
     result = evaluate(index, build_questions())
@@ -80,7 +80,7 @@ def main():
            "inventory": inventory,
            "corpus_fingerprint_sha256": corpus_fingerprint(docs),
            "audit": audit, "session_check": session_check}
-    path = os.path.join(HERE, "results_build.json")
+    path = os.path.join(os.path.dirname(HERE), "results", "results_build.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, sort_keys=True)
         f.write("\n")

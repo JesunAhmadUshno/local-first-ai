@@ -6,7 +6,7 @@ import sys
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-1-learn"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 from local_first import (  # noqa: E402
     LocalFirstError,
     LocalIndex,
@@ -186,7 +186,7 @@ class TestPrivacyAudit(unittest.TestCase):
         self.assertTrue(clean["passed"])
 
     def test_audit_of_real_level_sources_passes(self):
-        here = os.path.join(ROOT, "level-1-learn")
+        here = os.path.join(ROOT, "src")
         texts = {}
         for name in ("local_first.py", "run_learn.py"):
             with open(os.path.join(here, name), encoding="utf-8") as f:
