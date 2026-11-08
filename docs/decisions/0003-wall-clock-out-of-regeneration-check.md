@@ -16,3 +16,12 @@ other key.
 
 Consequences. Timing numbers are evidence of one machine on one day,
 not reproducible results; REPORT.md says so wherever they appear.
+
+Amendment (2026-11-08, same pull request). CI showed Python 3.11
+regenerating results_learn.json, results_build.json and
+results_rigor.json with last-digit float differences: Python 3.12
+changed sum() to compensated summation, and the results were recorded
+on 3.12. On 3.12 the check stays exact (byte for byte for Learn and
+Build, exact floats for Deep and rigor); on 3.11 floats are compared
+to a relative tolerance of 1e-9 and the first differing field is
+printed.
