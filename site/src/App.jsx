@@ -97,7 +97,7 @@ export default function App() {
   // Load every font face up front so the request counter in "Ask" sees only requests made by a question.
   useEffect(() => { document.fonts?.load?.('italic 20px "Instrument Serif"'); document.fonts?.load?.('500 12px "JetBrains Mono"'); }, []);
   return (
-    <div className="wrap">
+    <div className="wrap"><a className="skip" href="#top">Skip to content</a>
       <MenuBar />
       <div className="glow" aria-hidden="true" />
       <Hero />
@@ -113,14 +113,14 @@ export default function App() {
       <Dock />
       <footer>
         Corpus: 24 synthetic documents committed in <code>experiments/corpus</code>. Code: Apache-2.0. Every number on this page is read from the repo's results and README files at build time or computed live in your browser by a port that the build checks against those results.
-      </footer>
+      <nav className="support" aria-label="Support this work"><a href="https://github.com/sponsors/JesunAhmadUshno">Sponsor this work</a><a href="https://github.com/sponsors/JesunAhmadUshno">Donate</a><a href="https://buymeacoffee.com/jesun">Buy Me a Coffee</a><a href="https://calendly.com/jesunahmadushno/30min">Work with me</a></nav></footer>
     </div>
   );
 }
 
 function Hero() {
   return (
-    <header className="card hero window" id="top" data-title="local-first.app — README">
+    <header className="card hero window" id="top" data-title="local-first.app - README">
       <div className="head">
         <p className="eyebrow">Learn · Build · Deep · one offline study</p>
         <span className="pill good">● {build.audit.total_matches} network patterns found</span>
@@ -177,7 +177,7 @@ function Ask() {
   useEffect(() => { ask(all[0].q); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const chooser = (id) => { setPick(id); const item = all.find((a) => a.id === id); setText(item.q); ask(item.q); };
   return (
-    <section id="ask" className="card window reveal" data-title="assistant.py — live in your browser">
+    <section id="ask" className="card window reveal" data-title="assistant.py - live in your browser">
       <div className="head">
         <div>
           <p className="eyebrow">Live · computed in your browser</p>
@@ -246,7 +246,7 @@ function Evaluation() {
   const b = rigor.baselines;
   const hs = rigor.hard_set;
   return (
-    <section id="eval" className="card window reveal" data-title="run_build.py — parity check">
+    <section id="eval" className="card window reveal" data-title="run_build.py - parity check">
       <div className="head">
         <div>
           <p className="eyebrow">Live rerun · checked against the record</p>
@@ -337,7 +337,7 @@ function Threshold() {
   const W = narrow ? 360 : 960, H = hard ? 210 : 150, pad = { l: narrow ? 52 : 100, r: 14 }, x = (v) => pad.l + (v / 0.8) * (W - pad.l - pad.r);
   const row = (ev, i) => (ev ? 52 : 98) + ((i % 3) - 1) * 9;
   return (
-    <section id="threshold" className="card window reveal" data-title="threshold.svg — refusal sweep">
+    <section id="threshold" className="card window reveal" data-title="threshold.svg - refusal sweep">
       <div className="head">
         <div>
           <p className="eyebrow">Live · computed in your browser</p>
@@ -392,7 +392,7 @@ function Chunking() {
   const isDefault = size === CHUNK_SIZE_WORDS && ov === CHUNK_OVERLAP_WORDS;
   const recorded = rigor.chunk_sweep.find((r) => r.chunk_size === size && r.overlap === ov);
   return (
-    <section id="chunking" className="card window reveal" data-title="chunker.py — sensitivity explorer">
+    <section id="chunking" className="card window reveal" data-title="chunker.py - sensitivity explorer">
       <div className="head">
         <div>
           <p className="eyebrow">Live · computed in your browser · new analysis</p>
@@ -430,7 +430,7 @@ function Cost() {
   });
   const max = Math.max(...data.map((d) => (basis === 'mean' ? d.mean : d.hi)));
   return (
-    <section id="cost" className="card window reveal" data-title="study.py — modelled cost">
+    <section id="cost" className="card window reveal" data-title="study.py - modelled cost">
       <div className="head">
         <div>
           <p className="eyebrow">Calculator · modelled, never measured</p>
@@ -493,7 +493,7 @@ function Latency() {
   const smax = Math.max(...sc.map((s) => s.answer_latency_ms_mean));
   const sy = (v) => sp.t + (1 - v / smax) * (SH - sp.t - sp.b);
   return (
-    <section id="latency" className="card window reveal" data-title="timing.json — recorded and live">
+    <section id="latency" className="card window reveal" data-title="timing.json - recorded and live">
       <div className="head">
         <div>
           <p className="eyebrow">Recorded replay · plus a live timer</p>
@@ -543,7 +543,7 @@ function Privacy() {
   const patterns = audits[0][1].patterns.map((p) => p.pattern);
   const notProven = BUILD_LIMITS.find((b) => b.startsWith('The privacy proof'));
   return (
-    <section id="privacy" className="card window reveal" data-title="audit.log — network pattern scan">
+    <section id="privacy" className="card window reveal" data-title="audit.log - network pattern scan">
       <p className="eyebrow">Recorded audit</p>
       <h2>Zero network calls in the source. The cloud path sends your chunks by design.</h2>
       <p className="sub">Each level scans its own source files for {patterns.length} network patterns. Counts below are copied from each level's results file.</p>
@@ -567,7 +567,7 @@ function Privacy() {
 function Verdict() {
   const v = deep.verdict;
   return (
-    <section id="verdict" className="card window reveal" data-title="README.md — verdict and limits">
+    <section id="verdict" className="card window reveal" data-title="README.md - verdict and limits">
       <p className="eyebrow">Verdict · from results_deep.json</p>
       <h2>Local wins lookups and privacy. Cloud wins anything that needs writing.</h2>
       <div style={{ overflowX: 'auto', marginTop: 16 }}>
@@ -591,7 +591,7 @@ function Verdict() {
 function Reproduce() {
   const cmds = ciCommands(ciYml);
   return (
-    <section id="reproduce" className="card window reveal" data-title="Terminal — python, standard library only">
+    <section id="reproduce" className="card window reveal" data-title="Terminal - python, standard library only">
       <p className="eyebrow">Reproduce it</p>
       <h2>No installs. Standard-library Python reruns every number.</h2>
       <ol className="steps" style={{ marginTop: 16 }}>
