@@ -1,0 +1,758 @@
+{
+ "CAL-E01": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "CAL-E02": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "CAL-E03": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "CAL-E04": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "CAL-E05": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "CAL-E06": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "CAL-E07": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "CAL-E08": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "CAL-E09": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "CAL-E10": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "CAL-E11": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "CAL-E12": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "CAL-E13": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "CAL-E14": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "CAL-E15": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "CAL-E16": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "CAL-E17": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "CAL-E18": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "CAL-E19": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "CAL-E20": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "CAL-E21": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "CAL-E22": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "CAL-E23": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "CAL-E24": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "CAL-E25": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "CAL-E26": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "CAL-E27": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-E28": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "CAL-E29": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "CAL-E30": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "CAL-E31": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "CAL-E32": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "CAL-E33": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "CAL-E34": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "CAL-E35": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "CAL-E36": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "CAL-E37": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "CAL-E38": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "CAL-E39": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "CAL-N01": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N02": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N03": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N04": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N05": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N06": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N07": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N08": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N09": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N10": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N11": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N12": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N13": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N14": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N15": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N16": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N17": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N18": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N19": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "CAL-N20": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-E001": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E002": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E003": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E004": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E005": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E006": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E007": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E008": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E009": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E010": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E011": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E012": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E013": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E014": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E015": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E016": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E017": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E018": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E019": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E020": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E021": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E022": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E023": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E024": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E025": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E026": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E027": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E028": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E029": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E030": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "HO-E031": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "HO-E032": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "HO-E033": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-E034": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "HO-E035": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "HO-E036": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "HO-E037": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "HO-E038": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "HO-E039": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "HO-E040": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "HO-E041": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "HO-E042": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-E043": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-E044": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-E045": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-E046": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E047": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E048": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E049": {
+  "doc": "C01",
+  "label": "EVIDENCE"
+ },
+ "HO-E050": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E051": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E052": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E053": {
+  "doc": "C02",
+  "label": "EVIDENCE"
+ },
+ "HO-E054": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E055": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E056": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E057": {
+  "doc": "C03",
+  "label": "EVIDENCE"
+ },
+ "HO-E058": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-E059": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E060": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E061": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E062": {
+  "doc": "C04",
+  "label": "EVIDENCE"
+ },
+ "HO-E063": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E064": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E065": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E066": {
+  "doc": "C05",
+  "label": "EVIDENCE"
+ },
+ "HO-E067": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E068": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E069": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E070": {
+  "doc": "C06",
+  "label": "EVIDENCE"
+ },
+ "HO-E071": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E072": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E073": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E074": {
+  "doc": "C07",
+  "label": "EVIDENCE"
+ },
+ "HO-E075": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-E076": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "HO-E077": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "HO-E078": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-E079": {
+  "doc": "C08",
+  "label": "EVIDENCE"
+ },
+ "HO-E080": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "HO-E081": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "HO-E082": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-E083": {
+  "doc": "C09",
+  "label": "EVIDENCE"
+ },
+ "HO-E084": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "HO-E085": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "HO-E086": {
+  "doc": "C10",
+  "label": "EVIDENCE"
+ },
+ "HO-E087": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-E088": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-E089": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-E090": {
+  "doc": "C11",
+  "label": "EVIDENCE"
+ },
+ "HO-N01": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N02": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N03": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N04": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N05": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N06": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N07": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N08": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N09": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N10": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N11": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N12": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N13": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N14": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N15": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N16": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N17": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N18": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N19": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N20": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N21": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N22": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N23": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N24": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N25": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N26": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N27": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N28": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N29": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N30": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N31": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N32": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N33": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N34": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N35": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N36": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N37": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N38": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N39": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ },
+ "HO-N40": {
+  "doc": null,
+  "label": "NO-EVIDENCE"
+ }
+}
