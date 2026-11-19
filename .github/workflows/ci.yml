@@ -26,7 +26,7 @@ jobs:
         run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Learn, Build, Deep and rigor runs; results regenerate from the code and corpus
         run: python src/check_results.py
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - name: Browser port matches the recorded results
