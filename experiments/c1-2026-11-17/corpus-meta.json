@@ -1,0 +1,101 @@
+[
+  {
+    "id": "C01",
+    "title": "The American Scholar",
+    "words": 7826,
+    "source_lines": [
+      546,
+      1270
+    ]
+  },
+  {
+    "id": "C02",
+    "title": "Compensation",
+    "words": 7728,
+    "source_lines": [
+      1272,
+      2001
+    ]
+  },
+  {
+    "id": "C03",
+    "title": "Self-Reliance",
+    "words": 10120,
+    "source_lines": [
+      2003,
+      2918
+    ]
+  },
+  {
+    "id": "C04",
+    "title": "Friendship",
+    "words": 5936,
+    "source_lines": [
+      2920,
+      3443
+    ]
+  },
+  {
+    "id": "C05",
+    "title": "Heroism",
+    "words": 4268,
+    "source_lines": [
+      3445,
+      3873
+    ]
+  },
+  {
+    "id": "C06",
+    "title": "Manners",
+    "words": 8065,
+    "source_lines": [
+      3875,
+      4599
+    ]
+  },
+  {
+    "id": "C07",
+    "title": "Gifts",
+    "words": 1531,
+    "source_lines": [
+      4601,
+      4742
+    ]
+  },
+  {
+    "id": "C08",
+    "title": "Nature",
+    "words": 6242,
+    "source_lines": [
+      4744,
+      5301
+    ]
+  },
+  {
+    "id": "C09",
+    "title": "Shakespeare; or, The Poet",
+    "words": 6600,
+    "source_lines": [
+      5303,
+      5928
+    ]
+  },
+  {
+    "id": "C10",
+    "title": "Prudence",
+    "words": 4539,
+    "source_lines": [
+      5930,
+      6336
+    ]
+  },
+  {
+    "id": "C11",
+    "title": "Circles",
+    "words": 4778,
+    "source_lines": [
+      6338,
+      6778
+    ]
+  }
+]
